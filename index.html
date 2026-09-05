@@ -170,13 +170,26 @@
     </sc-if>
   </button>
 
-  <div style="position: fixed; right: var(--space-5); bottom: var(--space-5); z-index: 60; display: flex; flex-direction: column; align-items: center; gap: 12px">
-    <a href="tel:+66922728997" aria-label="โทรหาเรา" title="โทรหาเรา" class="wc-float-btn" style="width: 56px; height: 56px; border-radius: 50%; background: var(--sage-600); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 23px; box-shadow: 0 6px 20px rgba(82,100,78,.45)" style-hover="animation: wc-fab-pulse 900ms ease-in-out infinite alternate; background: var(--sage-700)">
-      <i class="fa-solid fa-phone"></i>
-    </a>
-    <a href="tel:+66922728997" aria-label="แชทผ่าน LINE" title="แชทผ่าน LINE" class="wc-float-btn" style="width: 56px; height: 56px; border-radius: 50%; background: #06C755; color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 6px 20px rgba(6,199,85,.45)" style-hover="animation: wc-fab-pulse 900ms ease-in-out infinite alternate">
-      <i class="fa-brands fa-line"></i>
-    </a>
+  <div style="position: fixed; right: var(--space-5); bottom: var(--space-5); z-index: 60; display: flex; flex-direction: row; align-items: center; gap: 10px">
+    <button type="button" onClick="{{ toggleFabs }}" aria-label="{{ fabToggleLabel }}" title="{{ fabToggleLabel }}" class="wc-float-btn" style="position: relative; width: 40px; height: 40px; border-radius: 50%; background: var(--white); color: var(--ink-800); border: 1px solid var(--border-hairline); display: flex; align-items: center; justify-content: center; font-size: 15px; box-shadow: 0 6px 20px rgba(30,30,28,.2); padding: 0; cursor: pointer; flex: 0 0 auto; transition: transform var(--dur-base) var(--ease-out)" style-hover="transform: scale(1.08)">
+      <i class="{{ fabToggleIcon }}"></i>
+      <sc-if value="{{ !fabsOpen }}">
+        <span aria-hidden="true" style="position: absolute; top: -9px; right: -9px; width: 26px; height: 26px; border-radius: 50%; background: var(--gold-600); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 13px; box-shadow: 0 2px 8px rgba(0,0,0,.35); border: 2px solid var(--white)">
+          <i class="fa-solid fa-headset"></i>
+        </span>
+      </sc-if>
+    </button>
+    <div style="display: flex; flex-direction: row; align-items: center; gap: 12px; overflow: hidden; max-width: {{ fabsMaxWidth }}; opacity: {{ fabsOpacity }}; transition: max-width var(--dur-slow) var(--ease-out), opacity var(--dur-base) var(--ease-out)">
+      <a href="https://wa.me/66922728997" target="_blank" rel="noopener noreferrer" aria-label="แชทผ่าน WhatsApp" title="แชทผ่าน WhatsApp" class="wc-float-btn" style="width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 26px; box-shadow: 0 6px 20px rgba(37,211,102,.45); flex: 0 0 auto" style-hover="animation: wc-fab-pulse 900ms ease-in-out infinite alternate">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="tel:+66922728997" aria-label="แชทผ่าน LINE" title="แชทผ่าน LINE" class="wc-float-btn" style="width: 56px; height: 56px; border-radius: 50%; background: #06C755; color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 6px 20px rgba(6,199,85,.45); flex: 0 0 auto" style-hover="animation: wc-fab-pulse 900ms ease-in-out infinite alternate">
+        <i class="fa-brands fa-line"></i>
+      </a>
+      <a href="tel:+66922728997" aria-label="โทรหาเรา" title="โทรหาเรา" class="wc-float-btn" style="width: 56px; height: 56px; border-radius: 50%; background: var(--sage-600); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 23px; box-shadow: 0 6px 20px rgba(82,100,78,.45); flex: 0 0 auto" style-hover="animation: wc-fab-pulse 900ms ease-in-out infinite alternate; background: var(--sage-700)">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
   </div>
 
   <header style="position: sticky; top: 0; z-index: 40; background: var(--white); border-bottom: 1px solid var(--border-hairline)">
@@ -191,6 +204,7 @@
         <a href="#about" onClick="{{ closeNav }}" style="font-family: var(--font-display); font-size: var(--fs-body-sm); font-weight: var(--fw-medium); color: var(--ink-800); padding-block: 8px; border-bottom: 2px solid transparent; white-space: nowrap" style-hover="color: var(--sage-600); border-bottom-color: var(--gold-400)" data-en="About Us">เกี่ยวกับเรา</a>
         <a href="#companies" onClick="{{ closeNav }}" style="font-family: var(--font-display); font-size: var(--fs-body-sm); font-weight: var(--fw-medium); color: var(--ink-800); padding-block: 8px; border-bottom: 2px solid transparent; white-space: nowrap" style-hover="color: var(--sage-600); border-bottom-color: var(--gold-400)" data-en="Group Companies">กลุ่มบริษัท</a>
         <a href="#services" onClick="{{ closeNav }}" style="font-family: var(--font-display); font-size: var(--fs-body-sm); font-weight: var(--fw-medium); color: var(--ink-800); padding-block: 8px; border-bottom: 2px solid transparent; white-space: nowrap" style-hover="color: var(--sage-600); border-bottom-color: var(--gold-400)" data-en="Services">บริการทั้งหมด</a>
+        <a href="#partners" onClick="{{ closeNav }}" style="font-family: var(--font-display); font-size: var(--fs-body-sm); font-weight: var(--fw-medium); color: var(--ink-800); padding-block: 8px; border-bottom: 2px solid transparent; white-space: nowrap" style-hover="color: var(--sage-600); border-bottom-color: var(--gold-400)" data-en="Authorized Dealer &amp; Partner">ตัวแทนจำหน่ายและพาร์ทเนอร์</a>
         <a href="#results" onClick="{{ closeNav }}" style="font-family: var(--font-display); font-size: var(--fs-body-sm); font-weight: var(--fw-medium); color: var(--ink-800); padding-block: 8px; border-bottom: 2px solid transparent; white-space: nowrap" style-hover="color: var(--sage-600); border-bottom-color: var(--gold-400)" data-en="Results">ผลงานจริง</a>
         <a href="#clients" onClick="{{ closeNav }}" style="font-family: var(--font-display); font-size: var(--fs-body-sm); font-weight: var(--fw-medium); color: var(--ink-800); padding-block: 8px; border-bottom: 2px solid transparent; white-space: nowrap" style-hover="color: var(--sage-600); border-bottom-color: var(--gold-400)" data-en="Clients">ลูกค้าองค์กร</a>
         <a href="#coverage" onClick="{{ closeNav }}" style="font-family: var(--font-display); font-size: var(--fs-body-sm); font-weight: var(--fw-medium); color: var(--ink-800); padding-block: 8px; border-bottom: 2px solid transparent; white-space: nowrap" style-hover="color: var(--sage-600); border-bottom-color: var(--gold-400)" data-en="Coverage">พื้นที่ให้บริการ</a>
@@ -204,6 +218,7 @@
       <img src="assets/photography/view-bangkok.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; filter: saturate(1.25) brightness(1.1) contrast(1.03); transition: opacity var(--dur-slow) var(--ease-out); opacity: {{ op1 }}">
       <img src="assets/photography/view-phuket.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(1.25) brightness(1.1) contrast(1.03); transition: opacity var(--dur-slow) var(--ease-out); opacity: {{ op2 }}">
       <img src="assets/photography/view-hua-hin.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center bottom; filter: saturate(1.25) brightness(1.1) contrast(1.03); transition: opacity var(--dur-slow) var(--ease-out); opacity: {{ op3 }}">
+      <video ref="{{ bangkokVideoRef }}" src="assets/video/hero-bangkok-loop.mp4" poster="assets/video/hero-bangkok-poster.jpg" autoplay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsinline="{{ true }}" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(1.25) brightness(1.1) contrast(1.03); transition: opacity var(--dur-slow) var(--ease-out); opacity: {{ op4 }}"></video>
       <div style="position: absolute; inset: 0; background: rgba(20,24,22,.12)"></div>
       <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,24,22,.72) 0%, rgba(20,24,22,.22) 42%, rgba(20,24,22,.02) 75%, rgba(20,24,22,.08) 100%); left: -203px; top: -13px"></div>
     </div>
@@ -217,22 +232,26 @@
       </div>
     </div>
     <div style="position: relative; border-top: 1px solid rgba(255,255,255,.34); background-color: var(--ink-900)">
-      <div class="wc-region-tiles" style="max-width: var(--container-max); margin: 0 auto; padding: 0 var(--gutter); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr))">
-        <a href="#coverage" onMouseEnter="{{ r0 }}" onFocus="{{ r0 }}" style="padding: var(--space-6) var(--space-4) var(--space-6) 0; display: grid; gap: 5px; border-top: 3px solid {{ ub0 }}; color: var(--white)">
+      <div class="wc-region-tiles" style="max-width: var(--container-max); margin: 0 auto; padding: 0 var(--gutter); display: grid; grid-template-columns: repeat(5, minmax(0, 1fr))">
+        <a href="#coverage" onMouseEnter="{{ r4 }}" onFocus="{{ r4 }}" style="padding: var(--space-6) var(--space-4) var(--space-6) 0; display: grid; gap: 5px; border-top: 3px solid {{ ub4 }}; color: var(--white)">
+          <span style="font-family: var(--font-display); font-size: var(--fs-body); font-weight: var(--fw-semibold); color: var(--white)" data-en="Headquarter">สำนักงานใหญ่</span>
+          <span style="font-size: var(--fs-caption); color: rgba(255,255,255,.82)" data-en="Since 2019">ตั้งแต่ปี 2019</span>
+        </a>
+        <a href="https://www.facebook.com/WeCareSamui/" target="_blank" rel="noopener noreferrer" onMouseEnter="{{ r0 }}" onFocus="{{ r0 }}" style="padding: var(--space-6) var(--space-4); display: grid; gap: 5px; border-top: 3px solid {{ ub0 }}; color: var(--white)">
           <span style="font-family: var(--font-display); font-size: var(--fs-body); font-weight: var(--fw-semibold); color: var(--white)" data-en="Koh Samui">เกาะสมุย</span>
-          <span style="font-size: var(--fs-caption); color: rgba(255,255,255,.82)" data-en="Head office · Since 2019">สำนักงานใหญ่ · ตั้งแต่ปี 2019</span>
+          <span style="font-size: var(--fs-caption); color: rgba(255,255,255,.82)" data-en="Luxury hotel &amp; Private villa">โรงแรมหรู และวิลล่าส่วนตัว</span>
         </a>
-        <a href="#coverage" onMouseEnter="{{ r1 }}" onFocus="{{ r1 }}" style="padding: var(--space-6) var(--space-4); display: grid; gap: 5px; border-top: 3px solid {{ ub1 }}; color: var(--white)">
+        <a href="https://www.facebook.com/profile.php?id=61562929438368" target="_blank" rel="noopener noreferrer" onMouseEnter="{{ r1 }}" onFocus="{{ r1 }}" style="padding: var(--space-6) var(--space-4); display: grid; gap: 5px; border-top: 3px solid {{ ub1 }}; color: var(--white)">
           <span style="font-family: var(--font-display); font-size: var(--fs-body); font-weight: var(--fw-semibold); color: var(--white)" data-en="Bangkok">กรุงเทพมหานคร</span>
-          <span style="font-size: var(--fs-caption); color: rgba(255,255,255,.82)" data-en="Offices &amp; condominiums">อาคารสำนักงาน · คอนโดมิเนียม</span>
+          <span style="font-size: var(--fs-caption); color: rgba(255,255,255,.82)" data-en="Hotel chain &amp; Premium Townhome">เครือโรงแรม และทาวน์โฮมพรีเมียม</span>
         </a>
-        <a href="#coverage" onMouseEnter="{{ r2 }}" onFocus="{{ r2 }}" style="padding: var(--space-6) var(--space-4); display: grid; gap: 5px; border-top: 3px solid {{ ub2 }}; color: var(--white)">
+        <a href="https://www.facebook.com/profile.php?id=61593678853335" target="_blank" rel="noopener noreferrer" onMouseEnter="{{ r2 }}" onFocus="{{ r2 }}" style="padding: var(--space-6) var(--space-4); display: grid; gap: 5px; border-top: 3px solid {{ ub2 }}; color: var(--white)">
           <span style="font-family: var(--font-display); font-size: var(--fs-body); font-weight: var(--fw-semibold); color: var(--white)" data-en="Phuket">ภูเก็ต</span>
-          <span style="font-size: var(--fs-caption); color: rgba(255,255,255,.82)" data-en="Hotels &amp; resorts">โรงแรม · รีสอร์ท</span>
+          <span style="font-size: var(--fs-caption); color: rgba(255,255,255,.82)" data-en="Hotels &amp; Resorts">โรงแรม และรีสอร์ท</span>
         </a>
-        <a href="#coverage" onMouseEnter="{{ r3 }}" onFocus="{{ r3 }}" style="padding: var(--space-6) 0 var(--space-6) var(--space-4); display: grid; gap: 5px; border-top: 3px solid {{ ub3 }}; color: var(--white)">
+        <a href="https://www.facebook.com/profile.php?id=61594201310546" target="_blank" rel="noopener noreferrer" onMouseEnter="{{ r3 }}" onFocus="{{ r3 }}" style="padding: var(--space-6) 0 var(--space-6) var(--space-4); display: grid; gap: 5px; border-top: 3px solid {{ ub3 }}; color: var(--white)">
           <span style="font-family: var(--font-display); font-size: var(--fs-body); font-weight: var(--fw-semibold); color: var(--white)" data-en="Hua Hin">หัวหิน</span>
-          <span style="font-size: var(--fs-caption); color: rgba(255,255,255,.82)" data-en="Holiday homes &amp; villas">บ้านพักตากอากาศ · วิลล่า</span>
+          <span style="font-size: var(--fs-caption); color: rgba(255,255,255,.82)" data-en="Holiday home &amp; Villas">บ้านพักตากอากาศ และวิลล่า</span>
         </a>
       </div>
     </div>
@@ -753,13 +772,14 @@ class Component extends DCLogic {
   state = {
     region: 0, tile: -1, lang: 'en', navOpen: false,
     statsStarted: false, statFounded: 0, statTons: 0, statProvinces: 0, statKva: 0,
-    resultsPage: 0, resultsPaused: false,
+    resultsPage: 0, resultsPaused: false, fabsOpen: true,
   };
 
   constructor(props) {
     super(props);
     this.rootRef = React.createRef();
     this.heroVideoRef = React.createRef();
+    this.bangkokVideoRef = React.createRef();
     this.mapIframeRef = React.createRef();
   }
 
@@ -770,14 +790,15 @@ class Component extends DCLogic {
     this.setupReveal();
     this.startResultsAutoplay();
     const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (this.heroVideoRef.current) {
+    [this.heroVideoRef, this.bangkokVideoRef].forEach(ref => {
+      if (!ref.current) return;
       if (reduceMotion) {
-        this.heroVideoRef.current.pause();
+        ref.current.pause();
       } else {
-        this.heroVideoRef.current.muted = true;
-        this.heroVideoRef.current.play().catch(() => {});
+        ref.current.muted = true;
+        ref.current.play().catch(() => {});
       }
-    }
+    });
   }
   componentDidUpdate() { this.applyLang(); }
   componentWillUnmount() {
@@ -869,6 +890,7 @@ class Component extends DCLogic {
     return {
       rootRef: this.rootRef,
       heroVideoRef: this.heroVideoRef,
+      bangkokVideoRef: this.bangkokVideoRef,
       mapIframeRef: this.mapIframeRef,
       clientsRow1: row1.concat(row1),
       clientsRow2: row2.concat(row2),
@@ -899,15 +921,23 @@ class Component extends DCLogic {
       navIcon: this.state.navOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars',
       toggleNav: () => this.setState(s => ({ navOpen: !s.navOpen })),
       closeNav: () => this.setState({ navOpen: false }),
+      fabsOpen: this.state.fabsOpen,
+      toggleFabs: () => this.setState(s => ({ fabsOpen: !s.fabsOpen })),
+      fabToggleIcon: this.state.fabsOpen ? 'fa-solid fa-chevron-right' : 'fa-solid fa-chevron-left',
+      fabToggleLabel: this.state.fabsOpen ? (this.state.lang === 'th' ? 'ซ่อนปุ่มติดต่อ' : 'Hide contact buttons') : (this.state.lang === 'th' ? 'แสดงปุ่มติดต่อ' : 'Show contact buttons'),
+      fabsMaxWidth: this.state.fabsOpen ? '220px' : '0px',
+      fabsOpacity: this.state.fabsOpen ? 1 : 0,
       op0: active === 0 ? 1 : 0,
       op1: active === 1 ? 1 : 0,
       op2: active === 2 ? 1 : 0,
       op3: active === 3 ? 1 : 0,
-      r0: set(0), r1: set(1), r2: set(2), r3: set(3),
+      op4: active === 4 ? 1 : 0,
+      r0: set(0), r1: set(1), r2: set(2), r3: set(3), r4: set(4),
       ub0: active === 0 ? gold : off,
       ub1: active === 1 ? gold : off,
       ub2: active === 2 ? gold : off,
       ub3: active === 3 ? gold : off,
+      ub4: active === 4 ? gold : off,
       tA: tile(0), tB: tile(1), tC: tile(2), tD: tile(3), tOff: () => this.setState({ tile: -1 }),
       revA: rev(0), revB: rev(1), revC: rev(2), revD: rev(3),
       revYA: revY(0), revYB: revY(1), revYC: revY(2), revYD: revY(3),
