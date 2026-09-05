@@ -812,7 +812,7 @@ class Component extends DCLogic {
         this.revealObserver.unobserve(entry.target);
         if (entry.target.classList.contains('wc-stats-grid')) this.startStatsCountUp();
       });
-    }, { threshold: 0.2, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
     els.forEach(el => this.revealObserver.observe(el));
   }
 
