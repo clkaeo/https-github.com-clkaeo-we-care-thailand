@@ -1,0 +1,87 @@
+/* Base palette. Anchors marked (brand) are taken verbatim from the
+   2026 We Care corporate colour sheet (assets/brand/color-palettes-2026.jpg). */
+:root{
+  /* Sage — the group's primary. 60% of any composition. */
+  --sage-50:#F1F4F0;--sage-100:#DFE7DC;--sage-200:#C4D3C0;--sage-300:#A8BFA3;
+  --sage-400:#8BA485;/* (brand) 139 164 133 */
+  --sage-500:#7A9174;--sage-600:#667C61;--sage-700:#52644E;--sage-800:#3E4B3B;--sage-900:#2A3328;
+
+  /* Gold — the ring around the W. 30% accent. */
+  --gold-50:#FBF6EA;--gold-100:#F4E9CE;--gold-200:#E7D5A6;--gold-300:#D6BE7E;
+  --gold-400:#C6A959;/* (brand) 198 169 89 */
+  --gold-500:#B0934A;--gold-600:#927839;--gold-700:#74602E;--gold-800:#574823;--gold-900:#3A3018;
+
+  /* Ink & neutrals. 10% ink, plus the warm off-white canvas the website ships. */
+  --ink-900:#1E1E1C;/* (brand) 30 30 28 */
+  --ink-800:#33332F;--ink-700:#4B4B46;--ink-600:#6B6B64;--ink-500:#8C8C84;
+  --ink-400:#B0B0A8;--ink-300:#CFCFC9;--ink-200:#E3E3DE;
+  --ink-100:#EFEFEE;/* (brand) 239 239 238 */
+  --ink-50:#FBF8F5;/* website theme-color */
+  --white:#FFFFFF;
+
+  /* Sand — the 5% warm tint from the Bangkok sheet. */
+  --sand-100:#F7F1E6;--sand-200:#EBE0CE;/* (brand) 235 225 206 */
+  --sand-300:#DCCBAD;
+
+  /* Division accents — one per group company, straight off the colour sheet. */
+  --azure-200:#D6EAF5;--azure-300:#A7CFE7;/* (brand) Phuket / Laundry Factory */
+  --azure-500:#5A9EC2;/* (brand) */
+  --azure-700:#3C7396;
+  --dune-300:#EAD7B5;/* (brand) Phuket 5% */
+  --sun-300:#F7E88E;--sun-400:#F0D54E;/* (brand) Hua Hin */
+  --sun-600:#E0B81F;/* (brand) */
+
+  /* Semantic aliases — always prefer these in product code. */
+  --brand-primary:var(--sage-400);
+  --brand-primary-strong:var(--sage-600);
+  --brand-accent:var(--gold-400);
+  --brand-ink:var(--ink-900);
+
+  --surface-page:var(--ink-50);
+  --surface-card:var(--white);
+  --surface-sunken:var(--ink-100);
+  --surface-tint:var(--sage-50);
+  --surface-warm:var(--sand-100);
+  --surface-inverse:var(--ink-900);
+  --surface-brand:var(--sage-400);
+  --surface-brand-deep:var(--sage-700);
+
+  --text-heading:var(--ink-900);
+  --text-body:var(--ink-700);
+  --text-muted:var(--ink-600);
+  --text-eyebrow:var(--gold-500);
+  --text-on-brand:var(--white);
+  --text-on-inverse:var(--ink-100);
+  --text-link:var(--sage-600);
+  --text-link-hover:var(--gold-600);
+
+  --border-hairline:var(--ink-200);
+  --border-strong:var(--ink-300);
+  --border-brand:var(--sage-300);
+  --border-accent:var(--gold-300);
+
+  --focus-ring:var(--gold-500);
+
+  /* States — flat, no colour tricks: hover darkens one step, press darkens two.
+     Base is sage-600, not sage-400: white-on-sage-400 measured 2.71:1 (fails WCAG
+     AA 4.5:1 for the button label); sage-600 clears it at 4.54:1. */
+  --btn-primary-bg:var(--sage-600);
+  --btn-primary-bg-hover:var(--sage-700);
+  --btn-primary-bg-active:var(--sage-800);
+  --btn-accent-bg:var(--gold-400);
+  --btn-accent-bg-hover:var(--gold-500);
+  --btn-accent-bg-active:var(--gold-600);
+
+  /* Status — borrowed from the palette, not invented hues. */
+  --status-success:var(--sage-600);
+  --status-info:var(--azure-500);
+  --status-warning:var(--sun-600);
+  --status-danger:#B4462F;
+
+  /* Protection gradient for text over photography. */
+  --scrim-bottom:linear-gradient(to top,rgba(30,30,28,.82) 0%,rgba(30,30,28,.45) 42%,rgba(30,30,28,0) 100%);/* @kind color */
+  --scrim-flat:rgba(30,30,28,.55);
+}
+/* Division scopes: set on a wrapper to retint accents for a group company. */
+.wc-division-laundry{--brand-accent:var(--azure-500);--text-eyebrow:var(--azure-700);--border-accent:var(--azure-300);--btn-accent-bg:var(--azure-500);--btn-accent-bg-hover:var(--azure-700);--btn-accent-bg-active:var(--azure-700)}
+.wc-division-huahin{--brand-accent:var(--sun-400);--text-eyebrow:var(--sun-600);--border-accent:var(--sun-300);--btn-accent-bg:var(--sun-400);--btn-accent-bg-hover:var(--sun-600);--btn-accent-bg-active:var(--sun-600)}

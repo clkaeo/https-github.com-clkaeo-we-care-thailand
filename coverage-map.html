@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>We Care Thailand — Coverage</title>
+<script>
+  if (new URLSearchParams(location.search).get('lang') === 'th') document.title = 'We Care Thailand — พื้นที่ให้บริการ';
+  document.documentElement.lang = new URLSearchParams(location.search).get('lang') === 'th' ? 'th' : 'en';
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="_ds/we-care-thailand-design-system-a76b13ba-001e-4a6b-8dda-421d1d70d735/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/we-care-thailand-design-system-a76b13ba-001e-4a6b-8dda-421d1d70d735/tokens/colors.css">
+<link rel="stylesheet" href="_ds/we-care-thailand-design-system-a76b13ba-001e-4a6b-8dda-421d1d70d735/tokens/radius.css">
+<link rel="stylesheet" href="_ds/we-care-thailand-design-system-a76b13ba-001e-4a6b-8dda-421d1d70d735/tokens/elevation.css">
+<style>
+  html, body { margin: 0; height: 100%; font-family: 'Sarabun', sans-serif; background: #F1F4F0; }
+  #map { position: absolute; inset: 0; }
+  .wc-filters {
+    position: absolute; z-index: 500; top: 18px; left: 18px; right: 18px;
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .wc-chip {
+    font-family: 'Prompt', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: .02em;
+    background: #fff; color: #33352F; border: 1px solid #E3E3DE; border-radius: 999px;
+    padding: 8px 16px; cursor: pointer; box-shadow: 0 2px 8px rgba(30,30,28,.06);
+    transition: background 220ms cubic-bezier(.22,.61,.36,1), color 220ms, border-color 220ms;
+  }
+  .wc-chip:hover { background: #EFF3EC; }
+  .wc-chip[aria-pressed="true"] { background: #8BA485; color: #fff; border-color: #8BA485; }
+  .wc-chip .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 7px; vertical-align: 1px; }
+  .wc-pin {
+    width: 30px; height: 30px; border-radius: 50%; border: 3px solid #fff;
+    box-shadow: 0 3px 10px rgba(30,30,28,.28); display: grid; place-items: center;
+    color: #fff; font-size: 12px;
+  }
+  .wc-pin.hq { width: 38px; height: 38px; font-size: 15px; }
+  .leaflet-popup-content-wrapper { border-radius: 14px; box-shadow: 0 12px 32px rgba(30,30,28,.18); }
+  .leaflet-popup-content { margin: 14px 16px; font-size: 13px; line-height: 1.6; color: #4A4C45; }
+  .wc-pop-kind {
+    font-family: 'Prompt', sans-serif; font-size: 10px; font-weight: 600;
+    letter-spacing: .16em; text-transform: uppercase; color: #8BA485; display: block; margin-bottom: 3px;
+  }
+  .wc-pop-title { font-family: 'Prompt', sans-serif; font-size: 16px; font-weight: 600; color: #1E1E1C; display: block; margin-bottom: 5px; }
+  .wc-pop-phone { display: inline-block; margin-top: 8px; font-family: 'Prompt', sans-serif; font-size: 13px; font-weight: 600; color: #52644E; text-decoration: none; }
+  .wc-pop-phone:hover { text-decoration: underline; }
+  .wc-legend {
+    position: absolute; z-index: 500; bottom: 22px; left: 14px; background: rgba(255,255,255,.94);
+    border: 1px solid #E3E3DE; border-radius: 14px; padding: 12px 14px; font-size: 12px; color: #4A4C45;
+    box-shadow: 0 2px 8px rgba(30,30,28,.06); display: grid; gap: 6px;
+  }
+  .wc-legend b { font-family: 'Prompt', sans-serif; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #1E1E1C; font-weight: 600; }
+  .wc-legend span { display: flex; align-items: center; gap: 8px; }
+  .leaflet-container a.leaflet-popup-close-button { color: #8A8D82; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div class="wc-filters" id="filters"></div>
+<div class="wc-legend" id="legend"></div>
+<script>
+const LANG = new URLSearchParams(location.search).get('lang') === 'th' ? 'th' : 'en';
+const KIND = {
+  office:  { color: '#8BA485', icon: '●', label: { th: 'สำนักงาน / สาขา', en: 'Office / Branch' } },
+  factory: { color: '#5A9EC2', icon: '■', label: { th: 'โรงงานซักรีด', en: 'Laundry Factory' } },
+  villa:   { color: '#C6A959', icon: '✦', label: { th: 'วิลล่าภายใต้การดูแล', en: 'Managed Villas' } },
+};
+document.getElementById('legend').innerHTML =
+  '<b>' + (LANG === 'en' ? 'Location Type' : 'ประเภทที่ตั้ง') + '</b>' +
+  Object.values(KIND).map(k => '<span><i class="dot" style="width:9px;height:9px;border-radius:50%;background:' + k.color + ';display:inline-block"></i> ' + k.label[LANG] + '</span>').join('');
+
+const ZONE = {
+  'เฉวงน้อย': 'Chaweng Noi', 'บ่อผุด': 'Bo Phut', 'ละไม': 'Lamai', 'แม่น้ำ': 'Maenam',
+  'เกาะสมุย': 'Koh Samui', 'ลิปะน้อย เกาะสมุย': 'Lipa Noi, Koh Samui', 'กรุงเทพมหานคร': 'Bangkok',
+  'ภูเก็ต': 'Phuket', 'ประจวบคีรีขันธ์': 'Prachuap Khiri Khan',
+};
+const sub = th => LANG === 'en' ? (ZONE[th] || th) : th;
+
+const PLACES = [
+  { kind: 'office', hq: true, name: LANG === 'en' ? 'We Care Thailand — Head Office' : 'We Care Thailand — สำนักงานใหญ่', sub: sub('เกาะสมุย'), ll: [9.5713, 100.0129], phone: '092 272 8997',
+    note: LANG === 'en' ? '12/29 Moo 1, Maenam, Koh Samui, Surat Thani 84330 — hub for cleaning services, villa management and Kärcher authorised dealership' : '12/29 หมู่ 1 ต.แม่น้ำ อ.เกาะสมุย จ.สุราษฎร์ธานี 84330 — ศูนย์กลางบริการทำความสะอาด บริหารวิลล่า และตัวแทนจำหน่าย Kärcher' },
+  { kind: 'factory', name: 'We Care Laundry Factory', sub: sub('ลิปะน้อย เกาะสมุย'), ll: [9.502272222496778, 99.9516575267088], phone: '064 931 3882',
+    note: LANG === 'en' ? '11/39 Moo 4, Lipa Noi, Koh Samui, Surat Thani 84140 — processing over 10 tons of linen a day · 140 KVA backup generator' : '11/39 หมู่ 4 ต.ลิปะน้อย อ.เกาะสมุย จ.สุราษฎร์ธานี 84140 — กำลังผลิตกว่า 10 ตันผ้าต่อวัน · เครื่องกำเนิดไฟฟ้าสำรอง 140 KVA' },
+  { kind: 'office', name: 'We Care Bangkok', sub: sub('กรุงเทพมหานคร'), ll: [13.7563, 100.5018], phone: '098 978 7497',
+    note: LANG === 'en' ? 'Servicing office buildings, condominiums and residential projects in Bangkok and surrounding areas' : 'บริการอาคารสำนักงาน คอนโดมิเนียม และโครงการที่พักอาศัยในเขตกรุงเทพฯ และปริมณฑล' },
+  { kind: 'office', name: 'We Care Phuket', sub: sub('ภูเก็ต'), ll: [7.8804, 98.3923], phone: '066 113 3614',
+    note: LANG === 'en' ? 'Local team for hotels, resorts and villas on the Andaman coast' : 'ทีมงานประจำพื้นที่สำหรับโรงแรม รีสอร์ท และวิลล่าฝั่งอันดามัน' },
+  { kind: 'office', name: 'We Care Hua Hin', sub: sub('ประจวบคีรีขันธ์'), ll: [12.5684, 99.9577], phone: '089 656 3951',
+    note: LANG === 'en' ? 'Managing holiday homes and beachfront condos in Hua Hin–Cha-am' : 'ดูแลบ้านพักตากอากาศและคอนโดริมทะเลหัวหิน–ชะอำ' },
+  { kind: 'villa', name: 'Coconut Samui', sub: sub('แม่น้ำ'), ll: [9.5470661, 100.0057352] },
+  { kind: 'villa', name: 'Villa Vedra, Koh Samui', sub: sub('บ่อผุด'), ll: [9.5474977, 100.0264200] },
+  { kind: 'villa', name: 'Villa Joluma', sub: sub('แม่น้ำ'), ll: [9.5557134, 100.0028899] },
+  { kind: 'villa', name: 'Villa Kokö', sub: sub('บ่อผุด'), ll: [9.5490809, 100.0346026] },
+  { kind: 'villa', name: 'Villa Kurma', sub: sub('บ่อผุด'), ll: [9.5486102, 100.0339162] },
+  { kind: 'villa', name: 'Villa Lotus, Chaweng Noi', sub: sub('เฉวงน้อย'), ll: [9.5007878, 100.0505115] },
+  { kind: 'villa', name: 'Villa Louma', sub: sub('เฉวงน้อย'), ll: [9.4997778, 100.0505278] },
+  { kind: 'villa', name: 'Villa Mokkaran', sub: sub('เฉวงน้อย'), ll: [9.5001875, 100.0504375] },
+  { kind: 'villa', name: 'Villa Lady Blue Koh Samui', sub: sub('เฉวงน้อย'), ll: [9.5005028, 100.0504684] },
+  { kind: 'villa', name: 'Villa Sawadee, Chaweng Noi', sub: sub('เฉวงน้อย'), ll: [9.5001569, 100.0504879] },
+  { kind: 'villa', name: 'Villa Nirvana, Chaweng Noi', sub: sub('เฉวงน้อย'), ll: [9.4998889, 100.0504167] },
+  { kind: 'villa', name: 'Villa Hayou', sub: sub('ละไม'), ll: [9.4567500, 100.0369722] },
+  { kind: 'villa', name: 'Villa Marie', sub: sub('ละไม'), ll: [9.4566287, 100.0367585] },
+  { kind: 'villa', name: 'Eco Villa', sub: sub('ละไม'), ll: [9.4568541, 100.0368020] },
+  { kind: 'villa', name: 'Villa Oksana', sub: sub('ละไม'), ll: [9.4531675, 100.0204806] },
+  { kind: 'villa', name: 'Carbana Lodge', sub: sub('ละไม'), ll: [9.4350625, 100.0199933] },
+];
+
+const map = L.map('map', { scrollWheelZoom: false, zoomControl: false }).setView([12.4, 100.4], 6);
+L.control.zoom({ position: 'topright' }).addTo(map);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors', maxZoom: 18,
+}).addTo(map);
+
+const layers = { office: L.layerGroup(), factory: L.layerGroup(), villa: L.layerGroup() };
+PLACES.forEach(p => {
+  const k = KIND[p.kind];
+  const marker = L.marker(p.ll, {
+    icon: L.divIcon({
+      className: '', iconSize: [p.hq ? 38 : 30, p.hq ? 38 : 30], iconAnchor: [p.hq ? 19 : 15, p.hq ? 19 : 15],
+      html: '<div class="wc-pin' + (p.hq ? ' hq' : '') + '" style="background:' + k.color + '">' + k.icon + '</div>',
+    }),
+  });
+  const phoneLine = p.phone ? '<br><a class="wc-pop-phone" href="tel:+66' + p.phone.replace(/^0/, '').replace(/\s/g, '') + '">📞 ' + p.phone + '</a>' : '';
+  const noteLine = p.note ? '<br>' + p.note : '';
+  marker.bindPopup('<span class="wc-pop-kind">' + k.label[LANG] + '</span><span class="wc-pop-title">' + p.name + '</span>' + p.sub + noteLine + phoneLine);
+  marker.addTo(layers[p.kind]);
+});
+Object.values(layers).forEach(l => l.addTo(map));
+
+const FILTERS = [
+  { id: 'all', label: LANG === 'en' ? 'All' : 'ทั้งหมด', color: '#1E1E1C' },
+  { id: 'office', label: KIND.office.label[LANG], color: KIND.office.color },
+  { id: 'factory', label: KIND.factory.label[LANG], color: KIND.factory.color },
+  { id: 'villa', label: KIND.villa.label[LANG], color: KIND.villa.color },
+];
+const bar = document.getElementById('filters');
+let active = 'all';
+FILTERS.forEach(f => {
+  const b = document.createElement('button');
+  b.className = 'wc-chip';
+  b.type = 'button';
+  b.setAttribute('aria-pressed', String(f.id === 'all'));
+  b.innerHTML = (f.id === 'all' ? '' : '<i class="dot" style="background:' + f.color + '"></i>') + f.label;
+  b.onclick = () => {
+    active = f.id;
+    [...bar.children].forEach((c, i) => c.setAttribute('aria-pressed', String(FILTERS[i].id === active)));
+    Object.entries(layers).forEach(([k, l]) => {
+      const on = active === 'all' || active === k;
+      if (on && !map.hasLayer(l)) l.addTo(map);
+      if (!on && map.hasLayer(l)) map.removeLayer(l);
+    });
+    const pts = PLACES.filter(p => active === 'all' || p.kind === active).map(p => p.ll);
+    if (pts.length) map.flyToBounds(L.latLngBounds(pts).pad(0.35), { duration: .7 });
+  };
+  bar.appendChild(b);
+});
+map.on('click', () => map.scrollWheelZoom.enable());
+map.on('mouseout', () => map.scrollWheelZoom.disable());
+</script>
+</body>
+</html>

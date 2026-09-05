@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>We Care Thailand — ทำความสะอาด ซักรีดอุตสาหกรรม และบริหารอสังหาริมทรัพย์</title>
+<meta name="description" content="We Care Thailand รวมกิจการทำความสะอาด ซักรีดอุตสาหกรรม ตัวแทนจำหน่าย Kärcher และบริหารวิลล่า จากเกาะสมุยสู่กรุงเทพฯ ภูเก็ต และหัวหิน มาตรฐานเดียวกันทุกจังหวัด">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/logos/wecare-w-mark-gold.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="th_TH">
+<meta property="og:site_name" content="We Care Thailand">
+<meta property="og:title" content="We Care Thailand — ทำความสะอาด ซักรีดอุตสาหกรรม และบริหารอสังหาริมทรัพย์">
+<meta property="og:description" content="รวมกิจการทำความสะอาด ซักรีดอุตสาหกรรม ตัวแทนจำหน่าย Kärcher และบริหารวิลล่า จากเกาะสมุยสู่กรุงเทพฯ ภูเก็ต และหัวหิน มาตรฐานเดียวกันทุกจังหวัด">
+<meta property="og:image" content="assets/photography/view-koh-samui.jpg">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/we-care-thailand-design-system-a76b13ba-001e-4a6b-8dda-421d1d70d735/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/we-care-thailand-design-system-a76b13ba-001e-4a6b-8dda-421d1d70d735/tokens/colors.css">
+<link rel="stylesheet" href="_ds/we-care-thailand-design-system-a76b13ba-001e-4a6b-8dda-421d1d70d735/tokens/typography.css">
+<link rel="stylesheet" href="_ds/we-care-thailand-design-system-a76b13ba-001e-4a6b-8dda-421d1d70d735/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/we-care-thailand-design-system-a76b13ba-001e-4a6b-8dda-421d1d70d735/tokens/radius.css">
+<link rel="stylesheet" href="_ds/we-care-thailand-design-system-a76b13ba-001e-4a6b-8dda-421d1d70d735/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/we-care-thailand-design-system-a76b13ba-001e-4a6b-8dda-421d1d70d735/tokens/motion.css">
+<link rel="stylesheet" href="_ds/we-care-thailand-design-system-a76b13ba-001e-4a6b-8dda-421d1d70d735/tokens/base.css">
+<link rel="stylesheet" href="_ds/we-care-thailand-design-system-a76b13ba-001e-4a6b-8dda-421d1d70d735/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
+<script src="_ds/we-care-thailand-design-system-a76b13ba-001e-4a6b-8dda-421d1d70d735/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: var(--surface-page); font-family: var(--font-body); color: var(--text-body); }
+  a { color: var(--sage-600); text-decoration: none; }
+  a:hover { color: var(--gold-600); }
+  h1, h2, h3 { font-family: var(--font-display); color: var(--ink-900); margin: 0; text-wrap: pretty; }
+  p { margin: 0; }
+  @keyframes wc-marquee-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes wc-fab-pulse { from { transform: scale(1); } to { transform: scale(1.14); } }
+  .wc-logowall-mask { -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent); mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent); }
+  @media (prefers-reduced-motion: reduce) {
+    .wc-logowall-track, .wc-villa-track, .wc-float-btn, .wc-review-track { animation: none !important; }
+  }
+  .wc-review-card { flex: 0 0 auto; width: 320px; background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-6); display: flex; flex-direction: column; }
+  @media (max-width: 560px) {
+    .wc-review-card { width: 260px; }
+  }
+  .wc-villa-card { position: relative; flex: 0 0 auto; width: 260px; height: 195px; border-radius: var(--radius-md); overflow: hidden; display: block; box-shadow: var(--shadow-sm); }
+  .wc-villa-card img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-slow) var(--ease-out); }
+  .wc-villa-card:hover img { transform: scale(1.06); }
+  .wc-villa-card-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: var(--space-3) var(--space-4); background: linear-gradient(to top, rgba(20,22,18,.82), rgba(20,22,18,0)); color: var(--white); }
+  .wc-villa-card-caption .name { display: block; font-family: var(--font-display); font-size: var(--fs-body-sm); font-weight: var(--fw-semibold); line-height: 1.3; }
+  .wc-villa-card-caption .zone { display: block; font-size: 11px; opacity: .85; margin-top: 2px; }
+  @media (max-width: 560px) {
+    .wc-villa-card { width: 210px; height: 158px; }
+  }
+
+  .wc-reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1); }
+  .wc-reveal.wc-revealed { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) {
+    .wc-reveal { opacity: 1; transform: none; transition: none; }
+    .wc-ba-imgpair { transition: none !important; }
+  }
+
+  .wc-results-grid > .wc-ba-card:nth-child(1) { transition-delay: 0ms; }
+  .wc-results-grid > .wc-ba-card:nth-child(2) { transition-delay: 90ms; }
+  .wc-results-grid > .wc-ba-card:nth-child(3) { transition-delay: 180ms; }
+
+  .wc-ba-imgpair:has(img:first-child:hover) { grid-template-columns: 1.38fr 0.62fr !important; }
+  .wc-ba-imgpair:has(img:last-child:hover) { grid-template-columns: 0.62fr 1.38fr !important; }
+
+  .wc-ba-tags { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-bottom: 6px; }
+  .wc-ba-tags span { font-family: var(--font-display); font-size: 11px; font-weight: var(--fw-semibold); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--ink-600); }
+  .wc-ba-tags span.wc-ba-tag-after { color: var(--sage-600); text-align: right; }
+
+  .wc-results-carousel { position: relative }
+  .wc-results-viewport { overflow: hidden }
+  .wc-results-track { display: flex; transition: transform .6s cubic-bezier(.22,.61,.36,1) }
+  @media (prefers-reduced-motion: reduce) {
+    .wc-results-track { transition: none }
+  }
+  .wc-results-page { flex: 0 0 100%; min-width: 0 }
+  .wc-results-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; border: none; background: var(--white); box-shadow: var(--shadow-md); display: grid; place-items: center; cursor: pointer; color: var(--ink-800); font-size: 18px; z-index: 2; transition: background var(--dur-base) var(--ease-out) }
+  .wc-results-arrow:hover { background: var(--sage-100) }
+  .wc-results-arrow.prev { left: -18px }
+  .wc-results-arrow.next { right: -18px }
+  @media (max-width: 900px) {
+    .wc-results-arrow.prev { left: 0 }
+    .wc-results-arrow.next { right: 0 }
+  }
+
+  /* ---- Responsive: tablet ---- */
+  @media (max-width: 900px) {
+    .wc-nav-toggle { display: inline-flex !important; }
+    .wc-nav {
+      display: none !important;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border-hairline);
+      box-shadow: 0 12px 24px rgba(30,30,28,.1);
+      flex-direction: column !important;
+      align-items: stretch !important;
+      margin-left: 0 !important;
+      padding: var(--space-4) var(--gutter);
+      gap: var(--space-1) !important;
+      max-height: calc(100vh - var(--nav-h));
+      overflow-y: auto;
+    }
+    .wc-nav.wc-nav-open { display: flex !important; }
+    .wc-nav > a { padding-block: 12px !important; }
+    .wc-nav > .sc-host-x { width: 100%; }
+    .wc-nav > .sc-host-x > a, .wc-nav > .sc-host-x > button { display: block; width: 100%; text-align: center; box-sizing: border-box; }
+    header > div { position: relative; }
+
+    .wc-region-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    .wc-region-tiles > a { padding: var(--space-5) var(--space-4) !important; border-left: none !important; }
+
+    .wc-companies-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; grid-auto-rows: 320px !important; }
+    .wc-companies-grid > a { grid-column: auto !important; grid-row: auto !important; }
+    .wc-tile-reveal { opacity: 1 !important; transform: none !important; }
+
+    .wc-services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+
+    .wc-results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+
+    .wc-footer-grid { grid-template-columns: 1fr 1fr !important; }
+  }
+
+  /* ---- Responsive: phone ---- */
+  @media (max-width: 560px) {
+    .wc-region-tiles { grid-template-columns: 1fr !important; }
+    .wc-region-tiles > a { border-top-width: 1px !important; }
+
+    .wc-about-grid { grid-template-columns: 1fr !important; gap: var(--space-8) !important; }
+
+    .wc-companies-grid { grid-template-columns: 1fr !important; grid-auto-rows: 360px !important; }
+    .wc-tile-h3 { font-size: 22px !important; }
+
+    .wc-services-grid { grid-template-columns: 1fr !important; }
+
+    .wc-vacation-cards { grid-template-columns: 1fr !important; }
+    .wc-vacation-spotlight-head { flex-direction: column !important; align-items: flex-start !important; }
+
+    .wc-results-grid { grid-template-columns: 1fr !important; }
+
+    .wc-footer-grid { grid-template-columns: 1fr !important; }
+  }
+</style>
+</helmet>
+<div ref="{{ rootRef }}" style="background: var(--surface-page)">
+
+  <button type="button" onClick="{{ toggleLang }}" aria-label="Switch language" title="Switch language" class="wc-float-btn" style="position: fixed; left: var(--space-5); bottom: var(--space-5); z-index: 60; width: 52px; height: 52px; border-radius: 50%; overflow: hidden; background: var(--white); border: 1px solid var(--border-hairline); box-shadow: 0 6px 20px rgba(30,30,28,.2); padding: 0; display: block; cursor: pointer; transition: transform var(--dur-base) var(--ease-out)" style-hover="transform: scale(1.08)">
+    <sc-if value="{{ isThaiActive }}">
+      <svg viewBox="0 0 60 36" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" role="img" aria-label="English">
+        <rect width="60" height="36" fill="#00247d"></rect>
+        <path d="M0,0 L60,36 M60,0 L0,36" stroke="#fff" stroke-width="7"></path>
+        <path d="M0,0 L60,36 M60,0 L0,36" stroke="#cf142b" stroke-width="3"></path>
+        <path d="M30,0 V36 M0,18 H60" stroke="#fff" stroke-width="12"></path>
+        <path d="M30,0 V36 M0,18 H60" stroke="#cf142b" stroke-width="7"></path>
+      </svg>
+    </sc-if>
+    <sc-if value="{{ !isThaiActive }}">
+      <svg viewBox="0 0 9 6" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" role="img" aria-label="ไทย">
+        <rect width="9" height="6" fill="#A51931"></rect>
+        <rect y="1" width="9" height="4" fill="#F4F5F8"></rect>
+        <rect y="2" width="9" height="2" fill="#2D2A4A"></rect>
+      </svg>
+    </sc-if>
+  </button>
+
+  <div style="position: fixed; right: var(--space-5); bottom: var(--space-5); z-index: 60; display: flex; flex-direction: column; align-items: center; gap: 12px">
+    <a href="tel:+66922728997" aria-label="โทรหาเรา" title="โทรหาเรา" class="wc-float-btn" style="width: 56px; height: 56px; border-radius: 50%; background: var(--sage-600); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 23px; box-shadow: 0 6px 20px rgba(82,100,78,.45)" style-hover="animation: wc-fab-pulse 900ms ease-in-out infinite alternate; background: var(--sage-700)">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+    <a href="tel:+66922728997" aria-label="แชทผ่าน LINE" title="แชทผ่าน LINE" class="wc-float-btn" style="width: 56px; height: 56px; border-radius: 50%; background: #06C755; color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 6px 20px rgba(6,199,85,.45)" style-hover="animation: wc-fab-pulse 900ms ease-in-out infinite alternate">
+      <i class="fa-brands fa-line"></i>
+    </a>
+  </div>
+
+  <header style="position: sticky; top: 0; z-index: 40; background: var(--white); border-bottom: 1px solid var(--border-hairline)">
+    <div style="max-width: var(--container-max); margin: 0 auto; min-height: var(--nav-h); padding: var(--space-3) var(--gutter); display: flex; align-items: center; gap: var(--space-6); flex-wrap: wrap">
+      <a href="#top" style="display: block; flex: 0 0 auto">
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Logo" variant="thailand" height="{{ 48 }}" hint-size="150px,48px"></x-import>
+      </a>
+      <button type="button" class="wc-nav-toggle" onClick="{{ toggleNav }}" aria-label="Menu" style="display: none; margin-left: auto; width: 44px; height: 44px; align-items: center; justify-content: center; background: transparent; border: 1px solid var(--border-hairline); border-radius: var(--radius-md); color: var(--ink-800); font-size: 18px; cursor: pointer">
+        <i class="{{ navIcon }}"></i>
+      </button>
+      <nav class="wc-nav {{ navOpenClass }}" style="display: flex; align-items: center; gap: var(--space-4); margin-left: auto; flex-wrap: wrap; row-gap: var(--space-2)">
+        <a href="#about" onClick="{{ closeNav }}" style="font-family: var(--font-display); font-size: var(--fs-body-sm); font-weight: var(--fw-medium); color: var(--ink-800); padding-block: 8px; border-bottom: 2px solid transparent; white-space: nowrap" style-hover="color: var(--sage-600); border-bottom-color: var(--gold-400)" data-en="About Us">เกี่ยวกับเรา</a>
+        <a href="#companies" onClick="{{ closeNav }}" style="font-family: var(--font-display); font-size: var(--fs-body-sm); font-weight: var(--fw-medium); color: var(--ink-800); padding-block: 8px; border-bottom: 2px solid transparent; white-space: nowrap" style-hover="color: var(--sage-600); border-bottom-color: var(--gold-400)" data-en="Group Companies">กลุ่มบริษัท</a>
+        <a href="#services" onClick="{{ closeNav }}" style="font-family: var(--font-display); font-size: var(--fs-body-sm); font-weight: var(--fw-medium); color: var(--ink-800); padding-block: 8px; border-bottom: 2px solid transparent; white-space: nowrap" style-hover="color: var(--sage-600); border-bottom-color: var(--gold-400)" data-en="Services">บริการทั้งหมด</a>
+        <a href="#results" onClick="{{ closeNav }}" style="font-family: var(--font-display); font-size: var(--fs-body-sm); font-weight: var(--fw-medium); color: var(--ink-800); padding-block: 8px; border-bottom: 2px solid transparent; white-space: nowrap" style-hover="color: var(--sage-600); border-bottom-color: var(--gold-400)" data-en="Results">ผลงานจริง</a>
+        <a href="#clients" onClick="{{ closeNav }}" style="font-family: var(--font-display); font-size: var(--fs-body-sm); font-weight: var(--fw-medium); color: var(--ink-800); padding-block: 8px; border-bottom: 2px solid transparent; white-space: nowrap" style-hover="color: var(--sage-600); border-bottom-color: var(--gold-400)" data-en="Clients">ลูกค้าองค์กร</a>
+        <a href="#coverage" onClick="{{ closeNav }}" style="font-family: var(--font-display); font-size: var(--fs-body-sm); font-weight: var(--fw-medium); color: var(--ink-800); padding-block: 8px; border-bottom: 2px solid transparent; white-space: nowrap" style-hover="color: var(--sage-600); border-bottom-color: var(--gold-400)" data-en="Coverage">พื้นที่ให้บริการ</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top" style="position: relative; min-height: 86vh; display: grid; align-items: end; overflow: hidden; background: var(--ink-900)">
+    <div style="position: absolute; inset: 0">
+      <video ref="{{ heroVideoRef }}" src="assets/video/hero-koh-samui-loop.mp4" poster="assets/video/hero-koh-samui-poster.jpg" autoplay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsinline="{{ true }}" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(1.25) brightness(1.1) contrast(1.03); transition: opacity var(--dur-slow) var(--ease-out); opacity: {{ op0 }}"></video>
+      <img src="assets/photography/view-bangkok.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; filter: saturate(1.25) brightness(1.1) contrast(1.03); transition: opacity var(--dur-slow) var(--ease-out); opacity: {{ op1 }}">
+      <img src="assets/photography/view-phuket.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(1.25) brightness(1.1) contrast(1.03); transition: opacity var(--dur-slow) var(--ease-out); opacity: {{ op2 }}">
+      <img src="assets/photography/view-hua-hin.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center bottom; filter: saturate(1.25) brightness(1.1) contrast(1.03); transition: opacity var(--dur-slow) var(--ease-out); opacity: {{ op3 }}">
+      <div style="position: absolute; inset: 0; background: rgba(20,24,22,.12)"></div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,24,22,.72) 0%, rgba(20,24,22,.22) 42%, rgba(20,24,22,.02) 75%, rgba(20,24,22,.08) 100%); left: -203px; top: -13px"></div>
+    </div>
+    <div style="position: relative; max-width: var(--container-max); margin: 0 auto; padding: calc(var(--section-y) * 1.1) var(--gutter) var(--space-10); width: 100%; box-sizing: border-box">
+      <span style="display: block; font-family: var(--font-display); font-size: var(--fs-caption); font-weight: var(--fw-semibold); letter-spacing: var(--ls-caps-wide); text-transform: uppercase; color: var(--gold-400); margin-bottom: var(--space-6); text-shadow: 0 1px 3px rgba(0,0,0,.55), 0 2px 14px rgba(0,0,0,.4)">Not only cleaning but also caring</span>
+      <h1 style="font-size: var(--fs-display-1); font-weight: var(--fw-bold); color: var(--white); letter-spacing: -0.02em; line-height: 1.16; max-width: 22ch; text-shadow: 0 2px 4px rgba(0,0,0,.5), 0 8px 28px rgba(0,0,0,.4)" data-en="One standard of care, now across every province of Thailand">มาตรฐานการดูแลเดียวกัน ในทุกจังหวัดของประเทศไทย</h1>
+      <p style="margin-top: var(--space-5); max-width: 58ch; font-size: var(--fs-body-lg); line-height: var(--lh-body); color: rgba(255,255,255,.92); text-shadow: 0 1px 3px rgba(0,0,0,.55), 0 4px 16px rgba(0,0,0,.35)" data-en="We Care Thailand brings together the cleaning, laundry and property-management businesses of We Care Samui, Bangkok, Phuket and Hua Hin — one team, one standard, wherever your property is.">We Care Thailand คือการรวมกิจการทำความสะอาด ซักรีด และบริหารอสังหาริมทรัพย์ ของ We Care สมุย กรุงเทพฯ ภูเก็ต และหัวหิน ไว้ภายใต้ทีมเดียว มาตรฐานเดียว ไม่ว่าทรัพย์สินของคุณจะอยู่ที่ใด</p>
+      <div style="display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-8)">
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Button" variant="accent" size="lg" href="#services" icon-after="fa-solid fa-arrow-right" hint-size="190px,54px"><span data-en="Explore our services">ดูบริการทั้งหมด</span></x-import>
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Button" variant="onDark" size="lg" href="#coverage" icon="fa-solid fa-location-dot" hint-size="190px,54px"><span data-en="Find your area">ค้นหาพื้นที่ให้บริการ</span></x-import>
+      </div>
+    </div>
+    <div style="position: relative; border-top: 1px solid rgba(255,255,255,.34); background-color: var(--ink-900)">
+      <div class="wc-region-tiles" style="max-width: var(--container-max); margin: 0 auto; padding: 0 var(--gutter); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr))">
+        <a href="#coverage" onMouseEnter="{{ r0 }}" onFocus="{{ r0 }}" style="padding: var(--space-6) var(--space-4) var(--space-6) 0; display: grid; gap: 5px; border-top: 3px solid {{ ub0 }}; color: var(--white)">
+          <span style="font-family: var(--font-display); font-size: var(--fs-body); font-weight: var(--fw-semibold); color: var(--white)" data-en="Koh Samui">เกาะสมุย</span>
+          <span style="font-size: var(--fs-caption); color: rgba(255,255,255,.82)" data-en="Head office · Since 2019">สำนักงานใหญ่ · ตั้งแต่ปี 2019</span>
+        </a>
+        <a href="#coverage" onMouseEnter="{{ r1 }}" onFocus="{{ r1 }}" style="padding: var(--space-6) var(--space-4); display: grid; gap: 5px; border-top: 3px solid {{ ub1 }}; color: var(--white)">
+          <span style="font-family: var(--font-display); font-size: var(--fs-body); font-weight: var(--fw-semibold); color: var(--white)" data-en="Bangkok">กรุงเทพมหานคร</span>
+          <span style="font-size: var(--fs-caption); color: rgba(255,255,255,.82)" data-en="Offices &amp; condominiums">อาคารสำนักงาน · คอนโดมิเนียม</span>
+        </a>
+        <a href="#coverage" onMouseEnter="{{ r2 }}" onFocus="{{ r2 }}" style="padding: var(--space-6) var(--space-4); display: grid; gap: 5px; border-top: 3px solid {{ ub2 }}; color: var(--white)">
+          <span style="font-family: var(--font-display); font-size: var(--fs-body); font-weight: var(--fw-semibold); color: var(--white)" data-en="Phuket">ภูเก็ต</span>
+          <span style="font-size: var(--fs-caption); color: rgba(255,255,255,.82)" data-en="Hotels &amp; resorts">โรงแรม · รีสอร์ท</span>
+        </a>
+        <a href="#coverage" onMouseEnter="{{ r3 }}" onFocus="{{ r3 }}" style="padding: var(--space-6) 0 var(--space-6) var(--space-4); display: grid; gap: 5px; border-top: 3px solid {{ ub3 }}; color: var(--white)">
+          <span style="font-family: var(--font-display); font-size: var(--fs-body); font-weight: var(--fw-semibold); color: var(--white)" data-en="Hua Hin">หัวหิน</span>
+          <span style="font-size: var(--fs-caption); color: rgba(255,255,255,.82)" data-en="Holiday homes &amp; villas">บ้านพักตากอากาศ · วิลล่า</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="padding: var(--section-y) 0">
+    <div class="wc-about-grid wc-reveal" style="max-width: var(--container-max); margin: 0 auto; padding: 0 var(--gutter); display: grid; grid-template-columns: 1.05fr 1fr; gap: var(--space-16); align-items: start">
+      <div style="display: grid; gap: var(--space-5)">
+        <span style="font-family: var(--font-display); font-size: var(--fs-caption); font-weight: var(--fw-semibold); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--sage-700)">About the group</span>
+        <h2 style="font-size: var(--fs-display-2); font-weight: var(--fw-semibold); letter-spacing: -0.02em; line-height: 1.2" data-en="One group, four businesses, a single promise of care">กลุ่มบริษัทเดียว สี่สายธุรกิจ ด้วยคำมั่นเรื่องความใส่ใจเพียงหนึ่งเดียว</h2>
+        <p style="font-size: var(--fs-body); line-height: var(--lh-body); max-width: 62ch" data-en="We Care began in 2019 on Koh Samui as a cleaning company committed to providing a full range of high-quality cleaning services, with long experience in the industry including a team of experts. Today the group operates an industrial laundry, a Kärcher authorised dealership, a villa-management arm, and regional teams in Bangkok, Phuket and Hua Hin.">We Care เริ่มต้นในปี 2019 ที่เกาะสมุย ในฐานะบริษัททำความสะอาดที่มุ่งมั่นให้บริการอย่างครบวงจรด้วยมาตรฐานสูง โดยทีมผู้เชี่ยวชาญที่มีประสบการณ์ยาวนานในอุตสาหกรรม ปัจจุบันกลุ่มบริษัทดำเนินธุรกิจโรงงานซักรีดอุตสาหกรรม ตัวแทนจำหน่าย Kärcher อย่างเป็นทางการ ธุรกิจบริหารวิลล่า และมีทีมงานประจำพื้นที่ทั้งกรุงเทพฯ ภูเก็ต และหัวหิน</p>
+        <p style="font-size: var(--fs-body); line-height: var(--lh-body); max-width: 62ch; color: var(--ink-700)" data-en="Wholeheartedness · Excellence · Caring · Agility · Responsibility and Respect · Evolution — the six values every team in every province works by.">ทำงานด้วยหัวใจ · ความเป็นเลิศ · ความใส่ใจ · ความคล่องตัว · ความรับผิดชอบและการให้เกียรติ · การพัฒนาอย่างต่อเนื่อง — คือค่านิยมหกข้อที่ทุกทีมในทุกจังหวัดยึดถือ</p>
+        <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-2)">
+          <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Button" variant="outline" size="md" href="#companies" icon-after="fa-solid fa-arrow-right" hint-size="180px,46px"><span data-en="Meet the companies">รู้จักบริษัทในเครือ</span></x-import>
+        </div>
+      </div>
+      <div class="wc-stats-grid wc-reveal" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4)">
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Card" tone="tint" pad="lg" elevation="none" hint-size="100%,150px">
+          <span style="display: block; font-family: var(--font-display); font-size: 40px; font-weight: var(--fw-bold); color: var(--sage-700); line-height: 1">{{ statFounded }}</span>
+          <span style="display: block; margin-top: 8px; font-size: var(--fs-body-sm); color: var(--ink-700)" data-en="Founded on Koh Samui">ก่อตั้งที่เกาะสมุย</span>
+        </x-import>
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Card" tone="tint" pad="lg" elevation="none" hint-size="100%,150px">
+          <span style="display: block; font-family: var(--font-display); font-size: 40px; font-weight: var(--fw-bold); color: var(--sage-700); line-height: 1">{{ statTons }}+</span>
+          <span style="display: block; margin-top: 8px; font-size: var(--fs-body-sm); color: var(--ink-700)" data-en="Tons of linen laundered per day">ตันผ้าที่ซักรีดต่อวัน</span>
+        </x-import>
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Card" tone="tint" pad="lg" elevation="none" hint-size="100%,150px">
+          <span style="display: block; font-family: var(--font-display); font-size: 40px; font-weight: var(--fw-bold); color: var(--sage-700); line-height: 1">{{ statProvinces }}</span>
+          <span style="display: block; margin-top: 8px; font-size: var(--fs-body-sm); color: var(--ink-700)" data-en="Provinces with resident teams">จังหวัดที่มีทีมงานประจำ</span>
+        </x-import>
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Card" tone="tint" pad="lg" elevation="none" hint-size="100%,150px">
+          <span style="display: block; font-family: var(--font-display); font-size: 40px; font-weight: var(--fw-bold); color: var(--sage-700); line-height: 1">{{ statKva }}</span>
+          <span style="display: block; margin-top: 8px; font-size: var(--fs-body-sm); color: var(--ink-700)" data-en="KVA backup generator at the laundry">KVA เครื่องกำเนิดไฟฟ้าสำรองที่โรงงาน</span>
+        </x-import>
+      </div>
+    </div>
+  </section>
+
+  <section id="companies" style="padding: var(--section-y) 0; background: var(--surface-tint)">
+    <div style="max-width: var(--container-max); margin: 0 auto; padding: 0 var(--gutter)">
+      <div style="display: flex; align-items: end; justify-content: space-between; gap: var(--space-8); flex-wrap: wrap; margin-bottom: var(--space-10)">
+        <div style="display: grid; gap: var(--space-4)">
+          <span style="font-family: var(--font-display); font-size: var(--fs-caption); font-weight: var(--fw-semibold); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--sage-700)">Group companies</span>
+          <h2 style="font-size: var(--fs-display-2); font-weight: var(--fw-semibold); letter-spacing: -0.02em; max-width: 26ch" data-en="Four businesses under one roof">สี่สายธุรกิจ ภายใต้หลังคาเดียวกัน</h2>
+        </div>
+      </div>
+      <div class="wc-companies-grid wc-reveal" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 268px; gap: var(--space-4)">
+
+        <a href="#services" onMouseEnter="{{ tA }}" onMouseLeave="{{ tOff }}" style="grid-column: 1 / 3; grid-row: 1 / 3; position: relative; overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: block">
+          <img src="assets/photography/team-carpet-machine.png" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-slow) var(--ease-out)" style-hover="transform: scale(1.04)">
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(30,30,28,.9) 0%, rgba(30,30,28,.25) 55%, rgba(30,30,28,.05) 100%); pointer-events: none"></div>
+          <div style="position: absolute; inset: auto 0 0 0; padding: var(--space-8); pointer-events: none">
+            <span style="display: inline-block; font-family: var(--font-display); font-size: 10px; font-weight: var(--fw-semibold); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--ink-900); background: var(--gold-400); border-radius: var(--radius-pill); padding: 5px 12px; margin-bottom: var(--space-4)" data-en="Parent company">บริษัทแม่</span>
+            <h3 class="wc-tile-h3" style="font-size: 30px; font-weight: var(--fw-semibold); color: var(--white); letter-spacing: -0.02em">We Care Ultimate Services</h3>
+            <div class="wc-tile-reveal" style="overflow: hidden; transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out); opacity: {{ revA }}; transform: translateY({{ revYA }})">
+              <p style="margin-top: var(--space-3); max-width: 46ch; font-size: var(--fs-body-sm); line-height: var(--lh-body); color: rgba(255,255,255,.84)" data-en="Deep cleaning, carpet and upholstery care, glass and façade work, floor and surface coating — plus the Kärcher retail shop. Head office: Maenam, Koh Samui.">ทำความสะอาดเชิงลึก ดูแลพรมและเบาะ งานกระจกและอาคาร เคลือบพื้นผิว พร้อมร้านจำหน่ายอุปกรณ์ Kärcher — สำนักงานใหญ่ ต.แม่น้ำ เกาะสมุย</p>
+              <span style="display: inline-flex; align-items: center; gap: 9px; margin-top: var(--space-4); font-family: var(--font-display); font-size: var(--fs-caption); font-weight: var(--fw-medium); letter-spacing: .08em; text-transform: uppercase; color: var(--gold-400)"><span data-en="View services">ดูบริการ</span> <i class="fa-solid fa-arrow-right" style="font-size: 11px"></i></span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#services" onMouseEnter="{{ tB }}" onMouseLeave="{{ tOff }}" style="grid-column: 3 / 4; grid-row: 2 / 3; position: relative; overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: block">
+          <img src="assets/photography/laundry-hall.png" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-slow) var(--ease-out)" style-hover="transform: scale(1.04)">
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(30,30,28,.9) 0%, rgba(30,30,28,.2) 70%); pointer-events: none"></div>
+          <div style="position: absolute; inset: auto 0 0 0; padding: var(--space-6); pointer-events: none">
+            <h3 class="wc-tile-h3" style="font-size: 23px; font-weight: var(--fw-semibold); color: var(--white); letter-spacing: -0.02em">We Care Laundry Factory</h3>
+            <div class="wc-tile-reveal" style="transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out); opacity: {{ revB }}; transform: translateY({{ revYB }})">
+              <p style="margin-top: var(--space-2); max-width: 44ch; font-size: var(--fs-body-sm); line-height: var(--lh-body); color: rgba(255,255,255,.84)" data-en="Industrial laundry for hotels, villas, restaurants and spas — over 10 tons of linen a day from Lipa Noi.">ซักรีดอุตสาหกรรมสำหรับโรงแรม วิลล่า ร้านอาหาร และสปา กำลังผลิตกว่า 10 ตันผ้าต่อวัน ที่ลิปะน้อย</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#coverage" onMouseEnter="{{ tC }}" onMouseLeave="{{ tOff }}" style="grid-column: 3 / 5; grid-row: 1 / 2; position: relative; overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: block">
+          <img src="assets/photography/facility-exterior.png" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-slow) var(--ease-out)" style-hover="transform: scale(1.04)">
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(30,30,28,.9) 0%, rgba(30,30,28,.2) 70%); pointer-events: none"></div>
+          <div style="position: absolute; inset: auto 0 0 0; padding: var(--space-6); pointer-events: none">
+            <h3 class="wc-tile-h3" style="font-size: 21px; font-weight: var(--fw-semibold); color: var(--white); letter-spacing: -0.02em">We Care Vacation</h3>
+            <div class="wc-tile-reveal" style="transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out); opacity: {{ revC }}; transform: translateY({{ revYC }})">
+              <p style="margin-top: var(--space-2); font-size: var(--fs-body-sm); line-height: var(--lh-body); color: rgba(255,255,255,.84)" data-en="Villa and holiday-rental management: housekeeping, maintenance, guest turnover.">บริหารวิลล่าและบ้านพักให้เช่า งานแม่บ้าน ซ่อมบำรุง และการต้อนรับผู้เข้าพัก</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#services" onMouseEnter="{{ tD }}" onMouseLeave="{{ tOff }}" style="grid-column: 4 / 5; grid-row: 2 / 3; position: relative; overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: block; background: var(--white)">
+          <img src="assets/photography/karcher-vacuum.png" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-slow) var(--ease-out)" style-hover="transform: scale(1.04)">
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(30,30,28,.9) 0%, rgba(30,30,28,.22) 70%); pointer-events: none"></div>
+          <div style="position: absolute; inset: auto 0 0 0; padding: var(--space-6); pointer-events: none">
+            <img src="assets/logos/karcher-authorized-dealer-badge.png" alt="Kärcher authorized dealer" style="height: 34px; width: auto; display: block; margin-bottom: var(--space-3); background: var(--white); border-radius: 6px; padding: 4px 8px">
+            <h3 class="wc-tile-h3" style="font-size: 21px; font-weight: var(--fw-semibold); color: var(--white); letter-spacing: -0.02em" data-en="Kärcher Authorized Dealer">ตัวแทนจำหน่าย Kärcher</h3>
+            <div class="wc-tile-reveal" style="transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out); opacity: {{ revD }}; transform: translateY({{ revYD }})">
+              <p style="margin-top: var(--space-2); font-size: var(--fs-body-sm); line-height: var(--lh-body); color: rgba(255,255,255,.84)" data-en="Machines, consumables, service and operator training.">จำหน่ายเครื่องจักร อุปกรณ์สิ้นเปลือง งานบริการหลังการขาย และอบรมผู้ใช้งาน</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="padding: var(--section-y) 0">
+    <div style="max-width: var(--container-max); margin: 0 auto; padding: 0 var(--gutter)">
+      <div style="display: grid; gap: var(--space-4); margin-bottom: var(--space-10); max-width: 62ch">
+        <span style="font-family: var(--font-display); font-size: var(--fs-caption); font-weight: var(--fw-semibold); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--sage-700)">Our services</span>
+        <h2 style="font-size: var(--fs-display-2); font-weight: var(--fw-semibold); letter-spacing: -0.02em" data-en="Every service, in every province we serve">ทุกบริการ ในทุกจังหวัดที่เราให้บริการ</h2>
+        <p style="font-size: var(--fs-body); line-height: var(--lh-body)" data-en="From a single villa turnover to a hotel's whole linen operation — the same teams, equipment and standards, coordinated from one place.">จากงานเตรียมวิลล่าหนึ่งหลัง ไปจนถึงงานผ้าทั้งระบบของโรงแรม ด้วยทีมงาน อุปกรณ์ และมาตรฐานชุดเดียวกัน ประสานงานจากศูนย์กลางแห่งเดียว</p>
+      </div>
+      <div class="wc-services-grid wc-reveal" style="display: grid; grid-template-columns: repeat({{ serviceColumns }}, minmax(0, 1fr)); gap: var(--space-6)">
+
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Card" pad="none" radius="lg" elevation="sm" interactive="{{ true }}" style="height: 100%" hint-size="100%,340px">
+          <div style="aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface-sunken)">
+            <img src="assets/photography/team-at-work.png" alt="" style="width: 100%; height: 100%; object-fit: cover">
+          </div>
+          <div style="padding: var(--card-pad); display: grid; gap: var(--space-3)">
+            <h3 style="font-size: var(--fs-h3); font-weight: var(--fw-semibold)" data-en="Ultimate deep cleaning">ทำความสะอาดเชิงลึก</h3>
+            <p style="font-size: var(--fs-body-sm); line-height: var(--lh-body)" data-en="A full-range clean for villas, offices and post-construction handover.">งานทำความสะอาดครบวงจรสำหรับวิลล่า สำนักงาน และงานส่งมอบหลังก่อสร้าง</p>
+          </div>
+        </x-import>
+
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Card" pad="none" radius="lg" elevation="sm" interactive="{{ true }}" style="height: 100%" hint-size="100%,340px">
+          <div style="aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface-sunken)">
+            <img src="assets/photography/carpet-cleaning.png" alt="" style="width: 100%; height: 100%; object-fit: cover">
+          </div>
+          <div style="padding: var(--card-pad); display: grid; gap: var(--space-3)">
+            <h3 style="font-size: var(--fs-h3); font-weight: var(--fw-semibold)" data-en="Carpet cleaning">ซักพรม</h3>
+            <p style="font-size: var(--fs-body-sm); line-height: var(--lh-body)" data-en="Restore the beauty and freshness of your carpets — because a cleaner carpet means a healthier space.">คืนความสวยงามและความสดชื่นให้พรมของคุณ เพราะพรมที่สะอาดหมายถึงพื้นที่ที่ดีต่อสุขภาพ</p>
+          </div>
+        </x-import>
+
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Card" pad="none" radius="lg" elevation="sm" interactive="{{ true }}" style="height: 100%" hint-size="100%,340px">
+          <div style="aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface-sunken)">
+            <img src="assets/photography/upholstery-sofa.png" alt="" style="width: 100%; height: 100%; object-fit: cover">
+          </div>
+          <div style="padding: var(--card-pad); display: grid; gap: var(--space-3)">
+            <h3 style="font-size: var(--fs-h3); font-weight: var(--fw-semibold)" data-en="Upholstery cleaning">ทำความสะอาดโซฟาและเบาะ</h3>
+            <p style="font-size: var(--fs-body-sm); line-height: var(--lh-body)" data-en="Give your furniture a new lease on life — because it deserves to feel as good as it looks.">คืนชีวิตใหม่ให้เฟอร์นิเจอร์ เพราะเฟอร์นิเจอร์ควรให้สัมผัสที่ดีเท่ากับรูปลักษณ์</p>
+          </div>
+        </x-import>
+
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Card" pad="none" radius="lg" elevation="sm" interactive="{{ true }}" style="height: 100%" hint-size="100%,340px">
+          <div style="aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface-sunken)">
+            <img src="assets/photography/mattress-cleaning.png" alt="" style="width: 100%; height: 100%; object-fit: cover">
+          </div>
+          <div style="padding: var(--card-pad); display: grid; gap: var(--space-3)">
+            <h3 style="font-size: var(--fs-h3); font-weight: var(--fw-semibold)" data-en="Mattress cleaning">ทำความสะอาดที่นอน</h3>
+            <p style="font-size: var(--fs-body-sm); line-height: var(--lh-body)" data-en="Dust-mite and stain treatment with steam cleaning — because a cleaner mattress means better sleep.">กำจัดไรฝุ่นและคราบฝังลึกด้วยเครื่องซักไอน้ำ เพราะที่นอนที่สะอาดหมายถึงการนอนหลับที่ดีขึ้น</p>
+          </div>
+        </x-import>
+
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Card" pad="none" radius="lg" elevation="sm" interactive="{{ true }}" style="height: 100%" hint-size="100%,340px">
+          <div style="aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface-sunken)">
+            <img src="assets/photography/team-carpet-machine.png" alt="" style="width: 100%; height: 100%; object-fit: cover">
+          </div>
+          <div style="padding: var(--card-pad); display: grid; gap: var(--space-3)">
+            <h3 style="font-size: var(--fs-h3); font-weight: var(--fw-semibold)" data-en="Odor removal &amp; ozone disinfection">พ่นฆ่าเชื้อและกำจัดกลิ่นด้วยโอโซน</h3>
+            <p style="font-size: var(--fs-body-sm); line-height: var(--lh-body)" data-en="Ozone treatment kills viruses, bacteria and odors in the air and on surfaces without harsh chemicals — ideal after illness, for shared spaces, or pet areas.">โอโซนฆ่าเชื้อไวรัส แบคทีเรีย และกลิ่นไม่พึงประสงค์ ทั้งในอากาศและพื้นผิว โดยไม่ใช้สารเคมีรุนแรง เหมาะสำหรับหลังการเจ็บป่วย พื้นที่ส่วนกลาง หรือบริเวณที่เลี้ยงสัตว์</p>
+          </div>
+        </x-import>
+
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Card" pad="none" radius="lg" elevation="sm" interactive="{{ true }}" style="height: 100%" hint-size="100%,340px">
+          <div style="aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface-sunken)">
+            <img src="assets/photography/glass-cleaning.png" alt="" style="width: 100%; height: 100%; object-fit: cover">
+          </div>
+          <div style="padding: var(--card-pad); display: grid; gap: var(--space-3)">
+            <h3 style="font-size: var(--fs-h3); font-weight: var(--fw-semibold)" data-en="Window, façade &amp; curtain cleaning">ทำความสะอาดกระจก อาคาร และผ้าม่าน</h3>
+            <p style="font-size: var(--fs-body-sm); line-height: var(--lh-body)" data-en="Rope-access and pole systems for high-rise glass, plus gentle fabric-safe curtain cleaning, with certified crews.">งานกระจกอาคารสูงด้วยระบบเชือกโรยตัวและด้ามยืด พร้อมทำความสะอาดผ้าม่านด้วยวิธีที่ปลอดภัยต่อเนื้อผ้า โดยทีมงานที่ผ่านการรับรอง</p>
+          </div>
+        </x-import>
+
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Card" pad="none" radius="lg" elevation="sm" interactive="{{ true }}" style="height: 100%" hint-size="100%,340px">
+          <div style="aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface-sunken)">
+            <img src="assets/photography/floor-surface.png" alt="" style="width: 100%; height: 100%; object-fit: cover">
+          </div>
+          <div style="padding: var(--card-pad); display: grid; gap: var(--space-3)">
+            <h3 style="font-size: var(--fs-h3); font-weight: var(--fw-semibold)" data-en="Floor &amp; surface coating">พื้นและการเคลือบพื้นผิว</h3>
+            <p style="font-size: var(--fs-body-sm); line-height: var(--lh-body)" data-en="Authorised applicator of surface-coating products since 2025. Rooms are safe for use after 30–60 minutes.">ผู้ให้บริการเคลือบพื้นผิวที่ได้รับการรับรองตั้งแต่ปี 2025 ใช้พื้นที่ได้หลังงานเสร็จ 30–60 นาที</p>
+          </div>
+        </x-import>
+
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Card" pad="none" radius="lg" elevation="sm" interactive="{{ true }}" style="height: 100%" hint-size="100%,340px">
+          <div style="aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface-sunken)">
+            <img src="assets/photography/laundry-ironer.png" alt="" style="width: 100%; height: 100%; object-fit: cover">
+          </div>
+          <div style="padding: var(--card-pad); display: grid; gap: var(--space-3)">
+            <h3 style="font-size: var(--fs-h3); font-weight: var(--fw-semibold)" data-en="Industrial laundry &amp; linen">ซักรีดอุตสาหกรรมและงานผ้า</h3>
+            <p style="font-size: var(--fs-body-sm); line-height: var(--lh-body)" data-en="Sorting, washing, ironing, folding and delivery on a daily hotel schedule.">คัดแยก ซัก รีด พับ และจัดส่งตามรอบประจำวันของโรงแรม</p>
+          </div>
+        </x-import>
+
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Card" pad="none" radius="lg" elevation="sm" interactive="{{ true }}" style="height: 100%" hint-size="100%,340px">
+          <div style="aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface-sunken)">
+            <img src="assets/photography/team-group.png" alt="" style="width: 100%; height: 100%; object-fit: cover">
+          </div>
+          <div style="padding: var(--card-pad); display: grid; gap: var(--space-3)">
+            <h3 style="font-size: var(--fs-h3); font-weight: var(--fw-semibold)" data-en="Property &amp; villa management">บริหารอสังหาริมทรัพย์และวิลล่า</h3>
+            <p style="font-size: var(--fs-body-sm); line-height: var(--lh-body)" data-en="Cleaning every 4-day stay, bedsheets every 7-day stay, plus maintenance and reporting.">ทำความสะอาดทุก 4 วันของการเข้าพัก เปลี่ยนผ้าปูที่นอนทุก 7 วัน พร้อมงานซ่อมบำรุงและรายงาน</p>
+          </div>
+        </x-import>
+      </div>
+    </div>
+  </section>
+
+  <section id="results" style="padding: var(--section-y) 0; background: var(--surface-tint)">
+    <div style="max-width: var(--container-max); margin: 0 auto; padding: 0 var(--gutter)">
+      <div style="display: grid; gap: var(--space-4); margin-bottom: var(--space-10); max-width: 62ch">
+        <span style="font-family: var(--font-display); font-size: var(--fs-caption); font-weight: var(--fw-semibold); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--sage-700)">Real results</span>
+        <h2 style="font-size: var(--fs-display-2); font-weight: var(--fw-semibold); letter-spacing: -0.02em" data-en="See the difference — before and after">เห็นผลจริง ก่อนและหลังการทำความสะอาด</h2>
+      </div>
+      <div class="wc-results-carousel" onMouseEnter="{{ resultsPauseOn }}" onMouseLeave="{{ resultsPauseOff }}">
+        <button type="button" class="wc-results-arrow prev" aria-label="ผลงานก่อนหน้า" onClick="{{ resultsPrev }}"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+        <button type="button" class="wc-results-arrow next" aria-label="ผลงานถัดไป" onClick="{{ resultsNext }}"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+        <div class="wc-results-viewport">
+          <div class="wc-results-track" style="transform: {{ resultsTransform }}">
+
+            <div class="wc-results-page">
+              <div class="wc-results-grid" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-8)">
+                <div class="wc-reveal wc-ba-card wc-revealed">
+                  <div class="wc-ba-tags"><span data-en="Before">ก่อน</span><span class="wc-ba-tag-after" data-en="After">หลัง</span></div>
+                  <div class="wc-ba-imgpair" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: grid-template-columns .5s cubic-bezier(.22,.61,.36,1)">
+                    <img src="assets/photography/before-after/carpet-before.png" alt="พรมก่อนทำความสะอาด" style="width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover">
+                    <img src="assets/photography/before-after/carpet-after.png" alt="พรมหลังทำความสะอาด" style="width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover">
+                  </div>
+                  <p style="margin-top: var(--space-3); font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-body)" data-en="Carpet cleaning">ซักพรม</p>
+                </div>
+                <div class="wc-reveal wc-ba-card wc-revealed">
+                  <div class="wc-ba-tags"><span data-en="Before">ก่อน</span><span class="wc-ba-tag-after" data-en="After">หลัง</span></div>
+                  <div class="wc-ba-imgpair" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: grid-template-columns .5s cubic-bezier(.22,.61,.36,1)">
+                    <img src="assets/photography/before-after/upholstery-before.png" alt="โซฟาก่อนทำความสะอาด" style="width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover">
+                    <img src="assets/photography/before-after/upholstery-after.png" alt="โซฟาหลังทำความสะอาด" style="width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover">
+                  </div>
+                  <p style="margin-top: var(--space-3); font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-body)" data-en="Upholstery cleaning">ทำความสะอาดโซฟาและเบาะ</p>
+                </div>
+                <div class="wc-reveal wc-ba-card wc-revealed">
+                  <div class="wc-ba-tags"><span data-en="Before">ก่อน</span><span class="wc-ba-tag-after" data-en="After">หลัง</span></div>
+                  <div class="wc-ba-imgpair" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: grid-template-columns .5s cubic-bezier(.22,.61,.36,1)">
+                    <img src="assets/photography/before-after/mattress-before.png" alt="ที่นอนก่อนทำความสะอาด" style="width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover">
+                    <img src="assets/photography/before-after/mattress-after.png" alt="ที่นอนหลังทำความสะอาด" style="width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover">
+                  </div>
+                  <p style="margin-top: var(--space-3); font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-body)" data-en="Mattress cleaning">ทำความสะอาดที่นอน</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="wc-results-page">
+              <div class="wc-results-grid" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-8)">
+                <div class="wc-reveal wc-ba-card wc-revealed">
+                  <div class="wc-ba-tags"><span data-en="Before">ก่อน</span><span class="wc-ba-tag-after" data-en="After">หลัง</span></div>
+                  <div class="wc-ba-imgpair" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: grid-template-columns .5s cubic-bezier(.22,.61,.36,1)">
+                    <img src="assets/photography/before-after/glass-before.png" alt="กระจกก่อนทำความสะอาด" style="width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover">
+                    <img src="assets/photography/before-after/glass-after.png" alt="กระจกหลังทำความสะอาด" style="width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover">
+                  </div>
+                  <p style="margin-top: var(--space-3); font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-body)" data-en="Glass &amp; shower cleaning">ทำความสะอาดกระจก</p>
+                </div>
+                <div class="wc-reveal wc-ba-card wc-revealed">
+                  <div class="wc-ba-tags"><span data-en="Before">ก่อน</span><span class="wc-ba-tag-after" data-en="After">หลัง</span></div>
+                  <div class="wc-ba-imgpair" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: grid-template-columns .5s cubic-bezier(.22,.61,.36,1)">
+                    <img src="assets/photography/before-after/deep-cleaning-before.png" alt="ผนังก่อนทำความสะอาดเชิงลึก" style="width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover">
+                    <img src="assets/photography/before-after/deep-cleaning-after.png" alt="ผนังหลังทำความสะอาดเชิงลึก" style="width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover">
+                  </div>
+                  <p style="margin-top: var(--space-3); font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-body)" data-en="Deep cleaning">ทำความสะอาดเชิงลึก</p>
+                </div>
+                <div class="wc-reveal wc-ba-card wc-revealed">
+                  <div class="wc-ba-tags"><span data-en="Before">ก่อน</span><span class="wc-ba-tag-after" data-en="After">หลัง</span></div>
+                  <div class="wc-ba-imgpair" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: grid-template-columns .5s cubic-bezier(.22,.61,.36,1)">
+                    <img src="assets/photography/before-after/floor-coating-before.png" alt="พื้นก่อนเคลือบผิว" style="width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover">
+                    <img src="assets/photography/before-after/floor-coating-after.png" alt="พื้นหลังเคลือบผิว" style="width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover">
+                  </div>
+                  <p style="margin-top: var(--space-3); font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-body)" data-en="Floor &amp; surface coating">พื้นและการเคลือบพื้นผิว</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="partners" style="padding: var(--section-y) 0">
+    <div style="max-width: var(--container-max); margin: 0 auto; padding: 0 var(--gutter)">
+      <div style="text-align: center; max-width: 56ch; margin: 0 auto var(--space-10)">
+        <span style="display: block; font-family: var(--font-display); font-size: var(--fs-caption); font-weight: var(--fw-semibold); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--sage-700); margin-bottom: var(--space-3)" data-en="Equipment &amp; supply partners">พาร์ทเนอร์ด้านอุปกรณ์</span>
+        <p style="font-size: var(--fs-body-sm); line-height: var(--lh-body); color: var(--ink-700)" data-en="We work only with certified, professional-grade equipment and products.">เราใช้อุปกรณ์และผลิตภัณฑ์คุณภาพระดับมืออาชีพที่ได้รับการรับรองเท่านั้น</p>
+      </div>
+      <div class="wc-reveal" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-10) var(--space-12)">
+        <img src="assets/logos/karcher-authorized-dealer-badge.png" alt="Kärcher Authorized Dealer" style="height: 42px; width: auto">
+        <img src="assets/logos/partners/ecolab.png" alt="Ecolab" style="height: 28px; width: auto">
+        <img src="assets/logos/partners/newpro.png" alt="NewPro Multi-Source" style="height: 32px; width: auto">
+        <img src="assets/logos/partners/drytreat.png" alt="DryTreat Accredited Applicator" style="height: 34px; width: auto">
+        <img src="assets/logos/partners/elerein.png" alt="Elerein" style="height: 30px; width: auto">
+      </div>
+    </div>
+  </section>
+
+  <section id="vacation" style="padding: var(--section-y) 0; background: var(--surface-tint)">
+    <div style="max-width: var(--container-max); margin: 0 auto; padding: 0 var(--gutter)">
+      <div class="wc-vacation-spotlight wc-reveal" style="background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-8)">
+        <div class="wc-vacation-spotlight-head" style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; margin-bottom: var(--space-6); padding-bottom: var(--space-6); border-bottom: 1px solid var(--border-hairline)">
+          <div style="display: flex; align-items: baseline; gap: var(--space-3)">
+            <span style="font-family: var(--font-display); font-size: 36px; font-weight: var(--fw-bold); color: var(--sage-700); line-height: 1">30</span>
+            <span style="font-size: var(--fs-body-sm); color: var(--ink-700)" data-en="villas under We Care Vacation management">วิลล่าภายใต้การดูแลของ We Care Vacation</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap">
+            <span style="font-family: var(--font-display); font-size: var(--fs-caption); font-weight: var(--fw-semibold); color: var(--ink-600); text-transform: uppercase; letter-spacing: .04em" data-en="Bookable across">จองผ่านแพลตฟอร์ม</span>
+            <i class="fa-brands fa-airbnb" style="font-size: 24px; color: #FF5A5F" title="Airbnb" aria-hidden="true"></i>
+            <img src="assets/logos/partners/booking-com.png" alt="Booking.com" style="height: 18px; width: auto">
+            <img src="assets/logos/partners/trip-com.png" alt="Trip.com" style="height: 18px; width: auto">
+          </div>
+        </div>
+        <div class="wc-vacation-cards" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6)">
+          <div style="display: grid; gap: var(--space-3)">
+            <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.IconTile" icon="fa-solid fa-house-chimney" tone="sage" hint-size="52px,52px"></x-import>
+            <h4 style="font-size: var(--fs-body); font-weight: var(--fw-semibold)" data-en="Holiday rental made easy">บริหารวิลล่าให้เช่าแบบไม่ยุ่งยาก</h4>
+            <p style="font-size: var(--fs-body-sm); line-height: var(--lh-body); color: var(--ink-700)" data-en="We handle the details, so you don't have to.">เราดูแลรายละเอียดทุกอย่างแทนคุณ</p>
+          </div>
+          <div style="display: grid; gap: var(--space-3)">
+            <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.IconTile" icon="fa-solid fa-briefcase" tone="gold" hint-size="52px,52px"></x-import>
+            <h4 style="font-size: var(--fs-body); font-weight: var(--fw-semibold)" data-en="Fully managed service">บริการดูแลครบวงจร</h4>
+            <p style="font-size: var(--fs-body-sm); line-height: var(--lh-body); color: var(--ink-700)" data-en="From daily operations to guest support, we manage it all.">ตั้งแต่งานประจำวันไปจนถึงการดูแลผู้เข้าพัก เราจัดการให้ทั้งหมด</p>
+          </div>
+          <div style="display: grid; gap: var(--space-3)">
+            <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.IconTile" icon="fa-solid fa-sack-dollar" tone="sage" hint-size="52px,52px"></x-import>
+            <h4 style="font-size: var(--fs-body); font-weight: var(--fw-semibold)" data-en="Boost your income">เพิ่มรายได้ให้ทรัพย์สินของคุณ</h4>
+            <p style="font-size: var(--fs-body-sm); line-height: var(--lh-body); color: var(--ink-700)" data-en="Maximize your property's potential with smarter management.">เพิ่มศักยภาพทรัพย์สินของคุณด้วยการบริหารจัดการที่ชาญฉลาด</p>
+          </div>
+        </div>
+
+        <div style="margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--border-hairline)">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-5)">
+            <h4 style="font-size: var(--fs-body); font-weight: var(--fw-semibold)" data-en="Villas under our care">วิลล่าที่เราดูแลอยู่</h4>
+            <a href="https://www.wecareservice-management.com/th/our-villas/" target="_blank" rel="noopener" style="font-size: var(--fs-body-sm); font-weight: var(--fw-semibold); color: var(--sage-700); display: inline-flex; align-items: center; gap: 6px" data-en="View all villas &amp; book now →">ดูวิลล่าทั้งหมดและจองเลย →</a>
+          </div>
+          <div class="wc-logowall-mask" style="overflow: hidden">
+            <div class="wc-villa-track" style="display: flex; align-items: center; gap: var(--space-5); width: max-content; animation: wc-marquee-left 90s linear infinite" style-hover="animation-play-state: paused">
+              <sc-for list="{{ villaPhotosLoop }}" as="villa">
+                <a class="wc-villa-card" href="tel:+66922728997" aria-label="{{ villa.name }} — ติดต่อสอบถามและจองผ่าน We Care Vacation">
+                  <img src="{{ villa.src }}" alt="{{ villa.name }}" loading="lazy">
+                  <span class="wc-villa-card-caption">
+                    <span class="name">{{ villa.name }}</span>
+                    <span class="zone">{{ villa.zoneText }}</span>
+                  </span>
+                </a>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" style="padding: var(--section-y) 0">
+    <div style="max-width: var(--container-max); margin: 0 auto; padding: 0 var(--gutter)">
+      <div style="display: flex; align-items: end; justify-content: space-between; gap: var(--space-8); flex-wrap: wrap; margin-bottom: var(--space-10)">
+        <div style="display: grid; gap: var(--space-4); max-width: 56ch">
+          <span style="font-family: var(--font-display); font-size: var(--fs-caption); font-weight: var(--fw-semibold); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--sage-700)" data-en="Guest reviews">เสียงจากผู้เข้าพักจริง</span>
+          <h2 style="font-size: var(--fs-display-2); font-weight: var(--fw-semibold); letter-spacing: -0.02em" data-en="What guests say on Airbnb">รีวิวจากผู้เข้าพักบน Airbnb</h2>
+        </div>
+        <div style="display: flex; align-items: center; gap: var(--space-3)">
+          <i class="fa-brands fa-airbnb" style="font-size: 28px; color: #FF5A5F" title="Airbnb" aria-hidden="true"></i>
+          <div style="display: grid; line-height: 1.2">
+            <span style="font-family: var(--font-display); font-size: 20px; font-weight: var(--fw-bold); color: var(--ink-900)">4.76 <i class="fa-solid fa-star" style="font-size: 14px; color: var(--gold-400)"></i></span>
+            <span style="font-size: var(--fs-caption); color: var(--ink-600)" data-en="from 858+ Airbnb reviews">จาก 858+ รีวิวบน Airbnb</span>
+          </div>
+        </div>
+      </div>
+      <div class="wc-logowall-mask" style="overflow: hidden">
+        <div class="wc-review-track" style="display: flex; align-items: stretch; gap: var(--space-5); width: max-content; animation: wc-marquee-left 80s linear infinite" style-hover="animation-play-state: paused">
+          <sc-for list="{{ reviewsLoop }}" as="review">
+            <div class="wc-review-card">
+              <div style="display: flex; align-items: center; justify-content: space-between">
+                <span style="color: var(--gold-400); font-size: 13px; letter-spacing: 2px">★★★★★</span>
+                <i class="fa-brands fa-airbnb" style="font-size: 16px; color: #FF5A5F" aria-hidden="true"></i>
+              </div>
+              <p style="margin-top: var(--space-3); font-size: var(--fs-body-sm); line-height: var(--lh-body); color: var(--ink-700)">{{ review.text }}</p>
+              <div style="margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--border-hairline)">
+                <span style="display: block; font-family: var(--font-display); font-size: var(--fs-body-sm); font-weight: var(--fw-semibold); color: var(--ink-900)">{{ review.name }}</span>
+                <span style="display: block; font-size: var(--fs-caption); color: var(--ink-600)">{{ review.location }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="clients" style="padding: var(--section-y) 0">
+    <div style="max-width: var(--container-max); margin: 0 auto; padding: 0 var(--gutter)">
+      <div style="display: grid; gap: var(--space-4); margin-bottom: var(--space-10); max-width: 58ch">
+        <span style="font-family: var(--font-display); font-size: var(--fs-caption); font-weight: var(--fw-semibold); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--sage-700)">Clients &amp; partners</span>
+        <h2 style="font-size: var(--fs-display-2); font-weight: var(--fw-semibold); letter-spacing: -0.02em" data-en="Trusted by hotels, resorts and residences">ได้รับความไว้วางใจจากโรงแรม รีสอร์ท และโครงการที่พักอาศัย</h2>
+        <p style="font-size: var(--fs-body-sm); line-height: var(--lh-body); color: var(--ink-700)" data-en="A selection of the hotels, resorts and organisations We Care Thailand has served.">ตัวอย่างโรงแรม รีสอร์ท และองค์กรที่ We Care Thailand ได้ให้บริการ</p>
+      </div>
+      <div class="wc-reveal" style="display: grid; gap: var(--space-5)">
+        <div class="wc-logowall-mask" style="overflow: hidden">
+          <div class="wc-logowall-track" style="display: flex; align-items: center; gap: var(--space-8); width: max-content; animation: wc-marquee-left 54s linear infinite" style-hover="animation-play-state: paused">
+            <sc-for list="{{ clientsRow1 }}" as="logo">
+              <div style="flex: 0 0 auto; height: 72px; display: flex; align-items: center; justify-content: center; padding: 0 var(--space-2)">
+                <img src="{{ logo.src }}" alt="{{ logo.alt }}" loading="lazy" style="max-height: 40px; max-width: 150px; width: auto; height: auto; object-fit: contain; filter: grayscale(1) opacity(.5); transition: filter var(--dur-base) var(--ease-out)" style-hover="filter: grayscale(0) opacity(1)">
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <div class="wc-logowall-mask" style="overflow: hidden">
+          <div class="wc-logowall-track" style="display: flex; align-items: center; gap: var(--space-8); width: max-content; animation: wc-marquee-left 60s linear infinite reverse" style-hover="animation-play-state: paused">
+            <sc-for list="{{ clientsRow2 }}" as="logo">
+              <div style="flex: 0 0 auto; height: 72px; display: flex; align-items: center; justify-content: center; padding: 0 var(--space-2)">
+                <img src="{{ logo.src }}" alt="{{ logo.alt }}" loading="lazy" style="max-height: 40px; max-width: 150px; width: auto; height: auto; object-fit: contain; filter: grayscale(1) opacity(.5); transition: filter var(--dur-base) var(--ease-out)" style-hover="filter: grayscale(0) opacity(1)">
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="coverage" style="padding: var(--section-y) 0; background: var(--surface-tint)">
+    <div style="max-width: var(--container-max); margin: 0 auto; padding: 0 var(--gutter)">
+      <div style="display: flex; align-items: end; justify-content: space-between; gap: var(--space-8); flex-wrap: wrap; margin-bottom: var(--space-10)">
+        <div style="display: grid; gap: var(--space-4); max-width: 46ch">
+          <span style="font-family: var(--font-display); font-size: var(--fs-caption); font-weight: var(--fw-semibold); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--sage-700)">Coverage</span>
+          <h2 style="font-size: var(--fs-display-2); font-weight: var(--fw-semibold); letter-spacing: -0.02em" data-en="Where you'll find us">พื้นที่ให้บริการของเรา</h2>
+          <p style="font-size: var(--fs-body); line-height: var(--lh-body)" data-en="Offices, the laundry factory, and villas under our management. Filter the map, or tap a pin for details.">สำนักงานและสาขา โรงงานซักรีด และวิลล่าที่อยู่ภายใต้การดูแล เลือกกรองประเภทหรือคลิกที่หมุดเพื่อดูรายละเอียด</p>
+        </div>
+        <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Button" variant="outline" size="md" href="tel:+66922728997" icon="fa-solid fa-location-dot" hint-size="200px,46px"><span data-en="Ask about your area">สอบถามพื้นที่ของคุณ</span></x-import>
+      </div>
+      <div class="wc-reveal" style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-hairline); box-shadow: var(--shadow-sm); background: var(--white)">
+        <iframe ref="{{ mapIframeRef }}" src="coverage-map.html?lang=en" title="แผนที่พื้นที่ให้บริการ We Care Thailand" style="display: block; width: 100%; height: 620px; border: 0"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <x-import component-from-global-scope="WeCareThailandDesignSystem_a76b13.Footer" blurb="{{ footerBlurb }}" columns="{{ footerColumns }}" address="{{ footerAddress }}" phone="092 272 8997" email="contact.samui@wecareservice-management.com" hint-size="100%,420px"></x-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;serviceColumns&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:4,&quot;min&quot;:2,&quot;max&quot;:4,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;alwaysShowTileText&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+const CLIENT_LOGOS = [
+  { src: 'assets/logos/clients/01-four-seasons.png', alt: 'Four Seasons Resort Koh Samui' },
+  { src: 'assets/logos/clients/02-anantara.png', alt: 'Anantara' },
+  { src: 'assets/logos/clients/03-centara-reserve.png', alt: 'Centara Reserve Samui' },
+  { src: 'assets/logos/clients/04-vana-belle.png', alt: 'Vana Belle Resort Koh Samui, The Luxury Collection' },
+  { src: 'assets/logos/clients/05-conrad.png', alt: 'Conrad Hotels & Resorts' },
+  { src: 'assets/logos/clients/06-intercontinental.png', alt: 'InterContinental Hotels & Resorts' },
+  { src: 'assets/logos/clients/07-melia.png', alt: 'Meliá' },
+  { src: 'assets/logos/clients/08-luxury-collection.png', alt: 'The Luxury Collection' },
+  { src: 'assets/logos/clients/09-sala-chaweng-beach.png', alt: 'Sala Samui Chaweng Beach' },
+  { src: 'assets/logos/clients/10-sala-samui.png', alt: 'Sala Samui' },
+  { src: 'assets/logos/clients/11-banyan-tree.png', alt: 'Banyan Tree Samui' },
+  { src: 'assets/logos/clients/12-avani-plus.png', alt: 'Avani+ Samui' },
+  { src: 'assets/logos/clients/13-hyatt-regency.png', alt: 'Hyatt Regency Koh Samui' },
+  { src: 'assets/logos/clients/15-banana-fan-sea.png', alt: 'Banana Fan Sea Koh Samui' },
+  { src: 'assets/logos/clients/16-kimpton-kitalay.png', alt: 'Kimpton Kitalay Samui' },
+  { src: 'assets/logos/clients/17-amari.png', alt: 'Amari Koh Samui' },
+  { src: 'assets/logos/clients/18-napasai.png', alt: 'Napasai, A Belmond Hotel' },
+  { src: 'assets/logos/clients/19-thai-house-beach-resort.png', alt: 'Thai House Beach Resort' },
+  { src: 'assets/logos/clients/20-melati-beach-resort.png', alt: 'Melati Beach Resort & Spa' },
+  { src: 'assets/logos/clients/21-santiburi.png', alt: 'Santiburi' },
+  { src: 'assets/logos/clients/22-ozo-chaweng-samui.png', alt: 'OZO Chaweng Samui' },
+  { src: 'assets/logos/clients/23-outrigger.png', alt: 'Outrigger Koh Samui Beach Resort' },
+  { src: 'assets/logos/clients/24-miskawaan.png', alt: 'Miskawaan Health Group' },
+  { src: 'assets/logos/clients/25-sociatel.png', alt: 'Sociatel Koh Samui' },
+  { src: 'assets/logos/clients/26-samui-airport.png', alt: 'Samui Airport' },
+  { src: 'assets/logos/clients/27-bangkok-airways.png', alt: 'Bangkok Airways' },
+  { src: 'assets/logos/clients/28-dara-samui.png', alt: 'Dara Samui Beach Resort' },
+  { src: 'assets/logos/clients/29-maraleina.png', alt: 'Maraleina Sports Resort Koh Samui' },
+  { src: 'assets/logos/clients/30-holiday-inn-resort.png', alt: 'Holiday Inn Resort Samui Bophut Beach, an IHG Hotel' },
+  { src: 'assets/logos/clients/31-bdms-celes-samui.png', alt: 'BDMS Wellness Clinic x Celes Samui' },
+];
+
+const STAT_TARGETS = { statFounded: 2019, statTons: 10, statProvinces: 4, statKva: 140 };
+const RESULTS_PAGE_COUNT = 2;
+const RESULTS_AUTOPLAY_MS = 6000;
+
+const VILLA_PHOTOS = [
+  { src: 'assets/photography/villas/mokkaran.jpg', name: 'Villa Mokkaran', zone: 'เฉวงน้อย' },
+  { src: 'assets/photography/villas/nirvana.jpg', name: 'Villa Nirvana', zone: 'เฉวงน้อย' },
+  { src: 'assets/photography/villas/kurma.jpg', name: 'Villa Kurma', zone: 'บ่อผุด' },
+  { src: 'assets/photography/villas/marie.jpg', name: 'Villa Marie', zone: 'ละไม' },
+  { src: 'assets/photography/villas/lotus.jpg', name: 'Villa Lotus', zone: 'เฉวงน้อย' },
+  { src: 'assets/photography/villas/lady-blue.jpg', name: 'Villa Lady Blue', zone: 'เฉวงน้อย' },
+  { src: 'assets/photography/villas/sawadee.jpg', name: 'Villa Sawadee', zone: 'เฉวงน้อย' },
+  { src: 'assets/photography/villas/hayou.jpg', name: 'Villa Hayou', zone: 'ละไม' },
+  { src: 'assets/photography/villas/eco-villa.jpg', name: 'Eco Villa', zone: 'ละไม' },
+  { src: 'assets/photography/villas/louma.jpg', name: 'Villa Louma', zone: 'เฉวงน้อย' },
+  { src: 'assets/photography/villas/carbana-lodge.jpg', name: 'Carbana Lodge', zone: 'ละไม' },
+  { src: 'assets/photography/villas/vedra.jpg', name: 'Villa Vedra', zone: 'บ่อผุด' },
+  { src: 'assets/photography/villas/koko.jpg', name: 'Villa Kokö', zone: 'บ่อผุด' },
+  { src: 'assets/photography/villas/coconut-samui.jpg', name: 'Coconut Samui', zone: 'แม่น้ำ' },
+  { src: 'assets/photography/villas/joluma.jpg', name: 'Villa Joluma', zone: 'แม่น้ำ' },
+];
+const ZONE_EN = { 'เฉวงน้อย': 'Chaweng Noi', 'บ่อผุด': 'Bo Phut', 'ละไม': 'Lamai', 'แม่น้ำ': 'Maenam' };
+
+const REVIEWS = [
+  { name: 'Matt', location: 'Bristol, United Kingdom',
+    th: 'เข้าพักได้ประสบการณ์ที่ดีมากครับ ที่พักจริงสวยกว่าในรูปอีก น่ารักและสะอาดมาก แนะนำเลยครับ!',
+    en: 'We had a great stay here! Accommodation is better than the photos look. Lovely and clean. Would recommend!' },
+  { name: 'Camille', location: 'Barcelona, Spain',
+    th: 'วิลล่าสวยมากล้อมรอบด้วยต้นไม้เขียวขจี ห่างจากหาดละไมแค่ 10 นาทีโดยรถ อยู่ในกลุ่มวิลล่า 8 หลังที่เหมือนกัน ควรมีสกู๊ตเตอร์ไว้เดินทาง ทีมงานเจ้าของที่พักดูแลดีมาก ตอบทุกความต้องการ ประทับใจมากค่ะ ขอบคุณค่ะ!',
+    en: 'Great villa surrounded by amazing vegetation, a 10-minute drive from Lamai beach in a complex of 8 identical villas. You definitely need a scooter to move around. Great and nice host team answering all your needs. We had a great time, thank you!' },
+  { name: 'Sertac', location: 'Germany',
+    th: 'ที่พักสวยมาก สะอาด และเหมือนในรูปทุกอย่าง ทุกอย่างเป็นไปด้วยดี บริการทำความสะอาดระหว่างพักก็ยอดเยี่ยม สามารถไปชายหาดได้ง่ายด้วยสกู๊ตเตอร์ ประทับใจมากครับ!',
+    en: 'The accommodation is very beautiful, clean, and exactly as shown in the pictures. Everything went smoothly and the mid-stay cleaning was simply excellent. The beach is easily reached by scooter. Wonderful overall!' },
+  { name: 'Nils', location: 'Germany',
+    th: 'ขอบคุณสำหรับการเข้าพักที่ดีครับ เราสนุกกับช่วงเวลานี้มาก วิลล่าอยู่ในทำเลที่เงียบสงบ เหมาะกับการพักผ่อนจริงๆ และเดินทางไปเที่ยวที่ต่างๆ ได้สะดวก',
+    en: 'Thank you for the lovely stay. We had a wonderful time — the villa is quietly located and perfect for relaxing, with many excursion spots easy to reach from there.' },
+  { name: 'Ali', location: 'Utrecht, The Netherlands',
+    th: 'ดีเกินคาดมากครับ!',
+    en: 'Better than expected!' },
+  { name: 'Arianne', location: 'Scherpenzeel, Netherlands',
+    th: 'สถานที่สวยงามมากค่ะ! สิ่งอำนวยความสะดวกครบครัน อยู่ใกล้ Fisherman’s Village สามารถไปได้ทั้งสกู๊ตเตอร์และแท็กซี่ ตื่นเช้ามาเจอวิลล่าพร้อมสระว่ายน้ำส่วนตัวทุกวันมีความสุขมากค่ะ',
+    en: 'What a beautiful place! Equipped with every convenience, close to Fisherman’s Village by scooter or taxi. Lovely to wake up in your own villa with a pool every morning.' },
+  { name: 'Hadjer', location: 'Vitoria-Gasteiz, Spain',
+    th: 'วิลล่าในฝันเลยค่ะ ชอบการตกแต่ง สระว่ายน้ำ และบรรยากาศโดยรอบมาก ทุกอย่างเต็ม 10 อยากกลับมาพักอีกแน่นอนค่ะ',
+    en: 'A dream villa — we loved the decor, the pool and the surroundings, everything was a 10/10. Can’t wait to come back.' },
+  { name: 'Stefan', location: 'Bachhagel, Germany',
+    th: 'วิลล่าในฝันสำหรับใครที่อยากพักผ่อนท่ามกลางความเงียบสงบจริงๆ ครับ',
+    en: 'An absolute dream villa for anyone who wants to enjoy peace and quiet.' },
+];
+
+class Component extends DCLogic {
+  state = {
+    region: 0, tile: -1, lang: 'en', navOpen: false,
+    statsStarted: false, statFounded: 0, statTons: 0, statProvinces: 0, statKva: 0,
+    resultsPage: 0, resultsPaused: false,
+  };
+
+  constructor(props) {
+    super(props);
+    this.rootRef = React.createRef();
+    this.heroVideoRef = React.createRef();
+    this.mapIframeRef = React.createRef();
+  }
+
+  componentDidMount() {
+    this.applyLang();
+    this.observer = new MutationObserver(() => this.applyLang());
+    if (this.rootRef.current) this.observer.observe(this.rootRef.current, { childList: true, subtree: true });
+    this.setupReveal();
+    this.startResultsAutoplay();
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (this.heroVideoRef.current) {
+      if (reduceMotion) {
+        this.heroVideoRef.current.pause();
+      } else {
+        this.heroVideoRef.current.muted = true;
+        this.heroVideoRef.current.play().catch(() => {});
+      }
+    }
+  }
+  componentDidUpdate() { this.applyLang(); }
+  componentWillUnmount() {
+    if (this.observer) this.observer.disconnect();
+    if (this.revealObserver) this.revealObserver.disconnect();
+    if (this.resultsInterval) clearInterval(this.resultsInterval);
+  }
+
+  startResultsAutoplay() {
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+    this.resultsInterval = setInterval(() => {
+      if (this.state.resultsPaused) return;
+      this.setState((s) => ({ resultsPage: (s.resultsPage + 1) % RESULTS_PAGE_COUNT }));
+    }, RESULTS_AUTOPLAY_MS);
+  }
+
+  setupReveal() {
+    const root = this.rootRef.current;
+    if (!root) return;
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const els = [...root.querySelectorAll('.wc-reveal')];
+    if (reduceMotion || typeof IntersectionObserver === 'undefined') {
+      els.forEach(el => el.classList.add('wc-revealed'));
+      this.startStatsCountUp();
+      return;
+    }
+    this.revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('wc-revealed');
+        this.revealObserver.unobserve(entry.target);
+        if (entry.target.classList.contains('wc-stats-grid')) this.startStatsCountUp();
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(el => this.revealObserver.observe(el));
+  }
+
+  startStatsCountUp() {
+    if (this.state.statsStarted) return;
+    this.setState({ statsStarted: true });
+    const duration = 1400;
+    const start = performance.now();
+    const ease = (t) => 1 - Math.pow(1 - t, 3);
+    const tick = (now) => {
+      const t = Math.min(1, (now - start) / duration);
+      const e = ease(t);
+      this.setState({
+        statFounded: Math.round(STAT_TARGETS.statFounded * e),
+        statTons: Math.round(STAT_TARGETS.statTons * e),
+        statProvinces: Math.round(STAT_TARGETS.statProvinces * e),
+        statKva: Math.round(STAT_TARGETS.statKva * e),
+      });
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  applyLang() {
+    const root = this.rootRef.current;
+    if (!root) return;
+    const en = this.state.lang === 'en';
+    root.querySelectorAll('[data-en]').forEach(n => {
+      if (n.children.length) return;
+      if (n.dataset.th === undefined) n.dataset.th = n.textContent;
+      const next = en ? n.dataset.en : n.dataset.th;
+      if (n.textContent !== next) n.textContent = next;
+    });
+    root.setAttribute('lang', en ? 'en' : 'th');
+    document.documentElement.lang = en ? 'en' : 'th';
+    if (this.mapIframeRef.current) {
+      const wanted = 'coverage-map.html?lang=' + (en ? 'en' : 'th');
+      if (!this.mapIframeRef.current.src.endsWith(wanted)) this.mapIframeRef.current.src = wanted;
+    }
+  }
+
+  renderVals() {
+    const set = (region) => () => this.setState({ region });
+    const tile = (i) => () => this.setState({ tile: i });
+    const active = this.state.region;
+    const gold = 'var(--gold-400)';
+    const off = 'transparent';
+    const always = this.props.alwaysShowTileText ?? false;
+    const rev = (i) => (always || this.state.tile === i ? 1 : 0);
+    const revY = (i) => (always || this.state.tile === i ? '0px' : '10px');
+    const half = Math.ceil(CLIENT_LOGOS.length / 2);
+    const row1 = CLIENT_LOGOS.slice(0, half);
+    const row2 = CLIENT_LOGOS.slice(half);
+    return {
+      rootRef: this.rootRef,
+      heroVideoRef: this.heroVideoRef,
+      mapIframeRef: this.mapIframeRef,
+      clientsRow1: row1.concat(row1),
+      clientsRow2: row2.concat(row2),
+      villaPhotosLoop: (() => {
+        const en = this.state.lang === 'en';
+        const list = VILLA_PHOTOS.map(v => ({ ...v, zoneText: en ? ZONE_EN[v.zone] : v.zone }));
+        return list.concat(list);
+      })(),
+      reviewsLoop: (() => {
+        const en = this.state.lang === 'en';
+        const list = REVIEWS.map(r => ({ ...r, text: en ? r.en : r.th }));
+        return list.concat(list);
+      })(),
+      resultsTransform: 'translateX(-' + (this.state.resultsPage * 100) + '%)',
+      resultsPrev: () => this.setState(s => ({ resultsPage: (s.resultsPage - 1 + RESULTS_PAGE_COUNT) % RESULTS_PAGE_COUNT })),
+      resultsNext: () => this.setState(s => ({ resultsPage: (s.resultsPage + 1) % RESULTS_PAGE_COUNT })),
+      resultsPauseOn: () => this.setState({ resultsPaused: true }),
+      resultsPauseOff: () => this.setState({ resultsPaused: false }),
+      serviceColumns: this.props.serviceColumns ?? 4,
+      toggleLang: () => this.setState(s => ({ lang: s.lang === 'th' ? 'en' : 'th' })),
+      isThaiActive: this.state.lang === 'th',
+      navOpen: this.state.navOpen,
+      statFounded: this.state.statFounded,
+      statTons: this.state.statTons,
+      statProvinces: this.state.statProvinces,
+      statKva: this.state.statKva,
+      navOpenClass: this.state.navOpen ? 'wc-nav-open' : '',
+      navIcon: this.state.navOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars',
+      toggleNav: () => this.setState(s => ({ navOpen: !s.navOpen })),
+      closeNav: () => this.setState({ navOpen: false }),
+      op0: active === 0 ? 1 : 0,
+      op1: active === 1 ? 1 : 0,
+      op2: active === 2 ? 1 : 0,
+      op3: active === 3 ? 1 : 0,
+      r0: set(0), r1: set(1), r2: set(2), r3: set(3),
+      ub0: active === 0 ? gold : off,
+      ub1: active === 1 ? gold : off,
+      ub2: active === 2 ? gold : off,
+      ub3: active === 3 ? gold : off,
+      tA: tile(0), tB: tile(1), tC: tile(2), tD: tile(3), tOff: () => this.setState({ tile: -1 }),
+      revA: rev(0), revB: rev(1), revC: rev(2), revD: rev(3),
+      revYA: revY(0), revYB: revY(1), revYC: revY(2), revYD: revY(3),
+      footerBlurb: this.state.lang === 'en'
+        ? 'We Care Thailand — cleaning, industrial laundry and property management, from Koh Samui to every province we serve.'
+        : 'We Care Thailand — ทำความสะอาด ซักรีดอุตสาหกรรม และบริหารอสังหาริมทรัพย์ จากเกาะสมุยสู่ทุกจังหวัดที่เราให้บริการ',
+      footerAddress: this.state.lang === 'en'
+        ? '12/29 Moo 1, Maenam, Koh Samui, Surat Thani 84330'
+        : '12/29 หมู่ 1 ต.แม่น้ำ อ.เกาะสมุย จ.สุราษฎร์ธานี 84330',
+      footerColumns: this.state.lang === 'en' ? [
+        { title: 'Companies', links: [{ label: 'We Care Ultimate Services', href: '#companies' }, { label: 'We Care Laundry Factory', href: '#companies' }, { label: 'We Care Vacation', href: '#companies' }, { label: 'Kärcher Authorized Dealer', href: '#companies' }] },
+        { title: 'Services', links: [{ label: 'Deep cleaning', href: '#services' }, { label: 'Carpet & upholstery', href: '#services' }, { label: 'Window & façade', href: '#services' }, { label: 'Floor & surface coating', href: '#services' }] },
+      ] : [
+        { title: 'บริษัทในเครือ', links: [{ label: 'We Care Ultimate Services', href: '#companies' }, { label: 'We Care Laundry Factory', href: '#companies' }, { label: 'We Care Vacation', href: '#companies' }, { label: 'ตัวแทนจำหน่าย Kärcher', href: '#companies' }] },
+        { title: 'บริการ', links: [{ label: 'ทำความสะอาดเชิงลึก', href: '#services' }, { label: 'พรมและเบาะ', href: '#services' }, { label: 'กระจกและอาคาร', href: '#services' }, { label: 'เคลือบพื้นผิว', href: '#services' }] },
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>

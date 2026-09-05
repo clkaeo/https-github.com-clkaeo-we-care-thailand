@@ -1,0 +1,6 @@
+/* We Care Thailand — webfonts.
+   SUBSTITUTION NOTICE: no font binaries were supplied with the brand materials.
+   Prompt (geometric sans, Latin + Thai) stands in for the profile/website heading face;
+   Sarabun (humanist sans, Latin + Thai) stands in for body copy.
+   The "We Care" wordmark is a custom brush script — never re-typeset it; always use assets/logos/*. */
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");

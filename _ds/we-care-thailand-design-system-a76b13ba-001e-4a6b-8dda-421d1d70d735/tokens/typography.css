@@ -1,0 +1,38 @@
+:root{
+  --font-display:"Prompt","Noto Sans Thai",system-ui,sans-serif;
+  --font-body:"Sarabun","Noto Sans Thai",system-ui,sans-serif;
+  --font-mono:ui-monospace,"SFMono-Regular",Menlo,monospace;
+
+  --fw-light:300;/* @kind font */
+  --fw-regular:400;/* @kind font */
+  --fw-medium:500;/* @kind font */
+  --fw-semibold:600;/* @kind font */
+  --fw-bold:700;/* @kind font */
+
+  /* Display / heading scale — 1.25 ratio, capped for a service brand. */
+  --fs-display-1:clamp(2.75rem,4.4vw,4rem); /* @kind font */ /* 44 → 64 hero */   
+  --fs-display-2:clamp(2.25rem,3.2vw,3rem); /* @kind font */ /* 36 → 48 section */   
+  --fs-h1:2.25rem; /* @kind font */ /* 36 */   
+  --fs-h2:1.75rem; /* @kind font */ /* 28 */   
+  --fs-h3:1.375rem; /* @kind font */ /* 22 */  
+  --fs-h4:1.125rem; /* @kind font */ /* 18 */  
+  --fs-body-lg:1.0625rem; /* @kind font */ /* 17 */ 
+  --fs-body:1rem; /* @kind font */ /* 16 */    
+  --fs-body-sm:.9375rem; /* @kind font */ /* 15 */ 
+  --fs-caption:.8125rem; /* @kind font */ /* 13 */  
+  --fs-eyebrow:.8125rem; /* @kind font */ /* 13, always uppercase + tracked */  
+
+  --lh-tight:1.12;/* @kind other */--lh-heading:1.22;/* @kind other */--lh-snug:1.45;/* @kind other */--lh-body:1.68;/* @kind other */--lh-loose:1.8;/* @kind other */
+
+  --ls-display:-0.02em;/* @kind other */--ls-heading:-0.01em;/* @kind other */--ls-body:0;/* @kind other */
+  --ls-eyebrow:0.18em;/* @kind other */   /* the profile decks set caps this wide */
+  --ls-caps-wide:0.34em;/* @kind other */ /* "N O T  O N L Y  C L E A N I N G" treatment */
+
+  /* Semantic type roles */
+  --type-hero-family:var(--font-display);
+  --type-hero-weight:var(--fw-semibold);/* @kind font */
+  --type-heading-weight:var(--fw-semibold);/* @kind font */
+  --type-body-weight:var(--fw-regular);/* @kind font */
+  --measure-body:68ch;/* @kind other */
+  --measure-narrow:52ch;/* @kind other */
+}

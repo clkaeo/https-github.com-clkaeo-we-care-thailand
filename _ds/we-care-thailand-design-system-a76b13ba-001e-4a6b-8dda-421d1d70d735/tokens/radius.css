@@ -1,0 +1,9 @@
+:root{
+  --radius-xs:4px;
+  --radius-sm:8px;
+  --radius-md:12px;   /* default card / input */
+  --radius-lg:20px;   /* feature cards, media */
+  --radius-xl:32px;   /* full-bleed media blocks */
+  --radius-pill:999px;/* buttons and chips are pills */
+  --radius-circle:50%;/* the W mark is always a circle */
+}
